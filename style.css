@@ -3796,3 +3796,40 @@ html {
   }
 }
 
+/* ─── TIMEFRAME CALLOUT WITH SUCCESS ROCKET ──────────────── */
+.hand-drawn-callout {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #111111;
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.rocket-success-icon {
+  width: 32px;
+  height: 32px;
+  fill: #111111;
+  color: #111111;
+  flex-shrink: 0;
+  transform: rotate(-8deg);
+  transition: transform 0.3s ease;
+  animation: rocketPulse 3s ease-in-out infinite;
+}
+
+.hand-drawn-callout:hover .rocket-success-icon {
+  transform: translateY(-4px) rotate(-14deg) scale(1.1);
+}
+
+@keyframes rocketPulse {
+  0%, 100% {
+    transform: translateY(0) rotate(-8deg);
+  }
+  50% {
+    transform: translateY(-3px) rotate(-4deg);
+  }
+}
+
+
