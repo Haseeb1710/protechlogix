@@ -409,6 +409,7 @@ html {
   align-items: center;
   gap: 8px;
   flex-shrink: 0;
+  margin-right: 10px;
 }
 
 /* Navbar CTA Button */
