@@ -3800,36 +3800,37 @@ html {
 .hand-drawn-callout {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   color: #111111;
   font-weight: 800;
-  font-size: 1rem;
-  line-height: 1.25;
+  font-size: 1.05rem;
+  line-height: 1.2;
   letter-spacing: -0.01em;
 }
 
 .rocket-success-icon {
-  width: 32px;
-  height: 32px;
-  fill: #111111;
-  color: #111111;
+  width: 38px;
+  height: 38px;
   flex-shrink: 0;
-  transform: rotate(-8deg);
-  transition: transform 0.3s ease;
-  animation: rocketPulse 3s ease-in-out infinite;
+  transform: rotate(38deg);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: rocketLaunchFloat 2.8s ease-in-out infinite;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .hand-drawn-callout:hover .rocket-success-icon {
-  transform: translateY(-4px) rotate(-14deg) scale(1.1);
+  transform: translate(3px, -4px) rotate(42deg) scale(1.15);
 }
 
-@keyframes rocketPulse {
+@keyframes rocketLaunchFloat {
   0%, 100% {
-    transform: translateY(0) rotate(-8deg);
+    transform: translateY(0) rotate(38deg);
   }
   50% {
-    transform: translateY(-3px) rotate(-4deg);
+    transform: translateY(-4px) rotate(34deg);
   }
 }
+
 
 
