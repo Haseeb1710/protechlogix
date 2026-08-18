@@ -3796,16 +3796,92 @@ html {
   }
 }
 
-/* ─── TIMEFRAME CALLOUT WITH SUCCESS ROCKET ──────────────── */
+/* ─── PROCESS TIMELINE HEADER & SIDE CALLOUT ──────────────── */
+.timeline-header-wrap {
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto 54px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-title {
+  font-size: clamp(2.4rem, 4.4vw, 3.6rem);
+  font-weight: 900;
+  color: #111111;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.title-highlight-box {
+  background: var(--accent-green);
+  color: #111111;
+  padding: 2px 14px;
+  border-radius: 12px;
+  border: 2px solid #111111;
+  box-shadow: 3px 3px 0px #111111;
+  display: inline-block;
+}
+
+.timeline-subtitle {
+  font-size: 1.05rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.timeline-badges-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.t-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #111111;
+  color: #ffffff;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.t-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-green);
+}
+
+/* Callout moved completely to the side (No Overlap) */
+.timeline-callout-side {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4px;
+  padding-right: 36px;
+}
+
 .hand-drawn-callout {
   display: inline-flex;
   align-items: center;
   gap: 14px;
   color: #111111;
   font-weight: 800;
-  font-size: 1.05rem;
-  line-height: 1.2;
+  font-size: 0.96rem;
+  line-height: 1.25;
   letter-spacing: -0.01em;
+  transform: rotate(-3deg);
 }
 
 .rocket-success-icon {
@@ -3831,6 +3907,15 @@ html {
     transform: translateY(-4px) rotate(34deg);
   }
 }
+
+@media (max-width: 768px) {
+  .timeline-callout-side {
+    justify-content: center;
+    padding-right: 0;
+    margin-top: 14px;
+  }
+}
+
 
 
 
