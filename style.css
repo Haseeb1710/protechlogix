@@ -3830,11 +3830,11 @@ html {
 /* Timeframe Callout placed in the upper right (in the Red Mark spot) */
 .process-hero-callout {
   position: absolute;
-  top: 6px;
+  top: 10px;
   right: 25px;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   z-index: 10;
   user-select: none;
   transform: rotate(-3deg);
@@ -3842,7 +3842,7 @@ html {
 
 .callout-handwritten {
   font-family: 'Caveat', 'Comic Sans MS', cursive, sans-serif;
-  font-size: 1.35rem;
+  font-size: 1.18rem;
   font-weight: 700;
   color: #111111;
   line-height: 1.05;
@@ -3851,8 +3851,8 @@ html {
 }
 
 .rocket-success-icon {
-  width: 32px;
-  height: 32px;
+  width: 20px;
+  height: 20px;
   flex-shrink: 0;
   transform: rotate(38deg);
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
