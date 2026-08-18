@@ -242,14 +242,14 @@ document.addEventListener('DOMContentLoaded', () => {
       targetMouseY = (e.clientY - rect.top) / height;
     });
 
-    // 6 Fluid Mesh Luminous Orbs with dynamic trajectories
+    // 6 Fluid Mesh Luminous Orbs with dynamic trajectories on White Theme
     const orbs = [
-      { basePhase: 0.0, speed: 0.007, r: 0.55, cx: 0.25, cy: 0.35, color: 'rgba(198, 253, 80, 0.42)', scaleX: 1.2, scaleY: 0.8 },
-      { basePhase: 2.1, speed: 0.009, r: 0.65, cx: 0.78, cy: 0.40, color: 'rgba(6, 182, 212, 0.30)', scaleX: 0.9, scaleY: 1.3 },
+      { basePhase: 0.0, speed: 0.007, r: 0.55, cx: 0.25, cy: 0.35, color: 'rgba(198, 253, 80, 0.45)', scaleX: 1.2, scaleY: 0.8 },
+      { basePhase: 2.1, speed: 0.009, r: 0.65, cx: 0.78, cy: 0.40, color: 'rgba(56, 189, 248, 0.22)', scaleX: 0.9, scaleY: 1.3 },
       { basePhase: 4.2, speed: 0.006, r: 0.50, cx: 0.50, cy: 0.75, color: 'rgba(198, 253, 80, 0.35)', scaleX: 1.1, scaleY: 0.9 },
-      { basePhase: 1.4, speed: 0.008, r: 0.48, cx: 0.15, cy: 0.80, color: 'rgba(16, 185, 129, 0.38)', scaleX: 1.0, scaleY: 1.1 },
-      { basePhase: 3.5, speed: 0.005, r: 0.70, cx: 0.85, cy: 0.82, color: 'rgba(30, 60, 15, 0.75)', scaleX: 1.3, scaleY: 0.7 },
-      { basePhase: 5.0, speed: 0.004, r: 0.40, cx: 0.45, cy: 0.20, color: 'rgba(255, 255, 255, 0.18)', scaleX: 0.8, scaleY: 0.8 }
+      { basePhase: 1.4, speed: 0.008, r: 0.48, cx: 0.15, cy: 0.80, color: 'rgba(52, 211, 153, 0.25)', scaleX: 1.0, scaleY: 1.1 },
+      { basePhase: 3.5, speed: 0.005, r: 0.70, cx: 0.85, cy: 0.82, color: 'rgba(217, 249, 157, 0.40)', scaleX: 1.3, scaleY: 0.7 },
+      { basePhase: 5.0, speed: 0.004, r: 0.40, cx: 0.45, cy: 0.20, color: 'rgba(240, 253, 244, 0.80)', scaleX: 0.8, scaleY: 0.8 }
     ];
 
     function renderShaderFrame() {
@@ -259,11 +259,11 @@ document.addEventListener('DOMContentLoaded', () => {
       mouseX += (targetMouseX - mouseX) * 0.05;
       mouseY += (targetMouseY - mouseY) * 0.05;
 
-      // Deep rich black base
-      ctx.fillStyle = '#070806';
+      // Clean luminous white base
+      ctx.fillStyle = '#ffffff';
       ctx.fillRect(0, 0, width, height);
 
-      // 1. Draw glowing fluid radial mesh gradients with deep black tone contrast
+      // 1. Draw glowing fluid radial mesh gradients with luminous white contrast
       orbs.forEach(orb => {
         const motionX = orb.cx + Math.sin(t * orb.speed * 100 + orb.basePhase) * 0.10 + (mouseX - 0.5) * 0.12;
         const motionY = orb.cy + Math.cos(t * orb.speed * 85 + orb.basePhase) * 0.10 + (mouseY - 0.5) * 0.12;
@@ -274,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const grad = ctx.createRadialGradient(posX, posY, 0, posX, posY, radius);
         grad.addColorStop(0, orb.color);
-        grad.addColorStop(0.45, orb.color.replace(/[\d\.]+\)$/, '0.08)'));
+        grad.addColorStop(0.55, orb.color.replace(/[\d\.]+\)$/, '0.06)'));
         grad.addColorStop(1, 'transparent');
 
         ctx.fillStyle = grad;
@@ -286,25 +286,25 @@ document.addEventListener('DOMContentLoaded', () => {
       // 2. Interactive Cursor Glow Sphere
       const cursorX = mouseX * width;
       const cursorY = mouseY * height;
-      const cursorRadius = 160;
+      const cursorRadius = 180;
       const cursorGrad = ctx.createRadialGradient(cursorX, cursorY, 0, cursorX, cursorY, cursorRadius);
-      cursorGrad.addColorStop(0, 'rgba(198, 253, 80, 0.22)');
-      cursorGrad.addColorStop(0.5, 'rgba(6, 182, 212, 0.06)');
+      cursorGrad.addColorStop(0, 'rgba(198, 253, 80, 0.35)');
+      cursorGrad.addColorStop(0.5, 'rgba(56, 189, 248, 0.10)');
       cursorGrad.addColorStop(1, 'transparent');
       ctx.fillStyle = cursorGrad;
       ctx.beginPath();
       ctx.arc(cursorX, cursorY, cursorRadius, 0, Math.PI * 2);
       ctx.fill();
 
-      // 3. Deep Vignette Pass
+      // 3. Subtle Vignette Pass
       const vigGrad = ctx.createRadialGradient(width * 0.5, height * 0.45, Math.min(width, height) * 0.3, width * 0.5, height * 0.45, Math.max(width, height) * 0.75);
       vigGrad.addColorStop(0, 'transparent');
-      vigGrad.addColorStop(1, 'rgba(5, 7, 3, 0.88)');
+      vigGrad.addColorStop(1, 'rgba(255, 255, 255, 0.65)');
       ctx.fillStyle = vigGrad;
       ctx.fillRect(0, 0, width, height);
 
-      // 4. Dynamic Animated Wireframe Sine-Wave Mesh Overlay (ProjectOne & Paper Design Shaders)
-      ctx.strokeStyle = 'rgba(198, 253, 80, 0.06)';
+      // 4. Dynamic Animated Wireframe Sine-Wave Mesh Overlay
+      ctx.strokeStyle = 'rgba(0, 0, 0, 0.035)';
       ctx.lineWidth = 1;
 
       const numLines = 14;

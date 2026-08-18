@@ -544,7 +544,7 @@ html {
   }
 }
 
-/* ─── HERO SECTION (Full-Width, Sleek Black Tone & Screen-Fitted) ───── */
+/* ─── HERO SECTION (Luminous Clean White & Fluid Mesh Theme) ───── */
 .hero-section {
   padding: 85px 0 35px;
   width: 100%;
@@ -563,14 +563,14 @@ html {
   position: relative;
   overflow: hidden;
   border-radius: 0;
-  background: #080a06; /* Deep rich black base */
-  color: #ffffff;
+  background: #ffffff; /* Clean luminous white theme */
+  color: #111111;
   margin: 0;
   width: 100vw;
   max-width: 100%;
   padding: 85px 20px 35px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
   box-sizing: border-box;
 }
 
@@ -585,16 +585,16 @@ html {
   opacity: 0.95;
 }
 
-/* Deep Black Vignette Overlay */
+/* Luminous Light Grid Overlay */
 .shader-overlay-grid {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(ellipse at 50% 45%, transparent 35%, rgba(6, 8, 4, 0.82) 85%),
-    linear-gradient(to right, rgba(198, 253, 80, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(198, 253, 80, 0.03) 1px, transparent 1px);
+    radial-gradient(ellipse at 50% 45%, transparent 40%, rgba(255, 255, 255, 0.85) 90%),
+    linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
   background-size: 100% 100%, 36px 36px, 36px 36px;
   pointer-events: none;
   z-index: 2;
@@ -625,26 +625,26 @@ html {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(18, 18, 18, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #ffffff;
+  border: 1.5px solid #111111;
   padding: 4px 12px;
   border-radius: var(--radius-pill);
   font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.08em;
-  color: #ffffff;
-  box-shadow: var(--shadow-subtle);
+  color: #111111;
+  box-shadow: 2px 2px 0px #111111;
 }
 
 .glass-shader-badge {
-  background: rgba(12, 16, 10, 0.85) !important;
+  background: #ffffff !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(198, 253, 80, 0.28) !important;
-  color: #ffffff !important;
+  border: 1.5px solid #111111 !important;
+  color: #111111 !important;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+  box-shadow: 2px 2px 0px #111111 !important;
 }
 
 .badge-shimmer-top {
@@ -657,30 +657,31 @@ html {
 }
 
 .badge-star {
-  color: var(--accent-green);
+  color: #16a34a;
   font-size: 0.85rem;
 }
 
 .hero-teaser-text {
-  color: rgba(255, 255, 255, 0.78);
+  color: #374151;
   font-size: 0.84rem;
   font-weight: 600;
 }
 
 .shader-glow-text {
-  background: linear-gradient(135deg, #ffffff 0%, #c6fd50 45%, #b4ee36 100%) !important;
+  background: linear-gradient(135deg, #111111 0%, #15803d 70%, #16a34a 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
-  filter: drop-shadow(0 0 16px rgba(198, 253, 80, 0.45));
+  filter: none;
 }
 
 .hero-subtext {
-  color: rgba(255, 255, 255, 0.72) !important;
-  font-size: 0.88rem !important;
-  line-height: 1.45 !important;
+  color: #4b5563 !important;
+  font-size: 0.92rem !important;
+  line-height: 1.5 !important;
   max-width: 660px !important;
   margin: 0 auto 12px !important;
+  font-weight: 500;
 }
 
 .hero-headline-wrap {
@@ -692,6 +693,7 @@ html {
   line-height: 1.12 !important;
   margin-bottom: 8px !important;
   font-weight: 900 !important;
+  color: #111111 !important;
 }
 
 /* Pulsing Rotating Badge in Hero Corner */
@@ -711,8 +713,8 @@ html {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: radial-gradient(circle, #c6fd50 0%, #1a2a06 70%, transparent 100%);
-  box-shadow: 0 0 20px rgba(198, 253, 80, 0.5);
+  background: radial-gradient(circle, #c6fd50 0%, #a3e635 70%, transparent 100%);
+  box-shadow: 0 0 20px rgba(198, 253, 80, 0.6);
   animation: haloPulse 2.2s infinite alternate ease-in-out;
 }
 
@@ -725,7 +727,7 @@ html {
 }
 
 .badge-text-path {
-  fill: #c6fd50;
+  fill: #111111;
   font-size: 8px;
   font-weight: 900;
   letter-spacing: 0.12em;
