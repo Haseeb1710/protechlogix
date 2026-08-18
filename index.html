@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProTechlogix — Call Center, Insurance Leads, Web Dev & Lead Gen</title>
+  <meta name="description" content="ProTechlogix builds and runs your growth engine: Call Center Services, 24/7 Customer Support, Pre-Qualified Insurance Leads, Custom Web Dev, and High-Converting Lead Generation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=2.1" />
+</head>
+<body>
+
+  <!-- Floating Sticky Nav -->
+  <header class="header-wrap">
+    <nav class="navbar" id="navbar">
+      <a href="#" class="nav-logo">
+        <img src="logo-nav.png" alt="ProTechlogix Agency Logo" class="brand-logo-img" />
+      </a>
+
+      <div class="nav-pill-menu">
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#process" class="nav-link">How it works</a>
+        <a href="#why-trust-us" class="nav-link">Why Us</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#faqs" class="nav-link">FAQs</a>
+      </div>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-black">
+          <span>Get Started</span>
+          <span class="btn-arrow-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-links">
+      <a href="#services" class="drawer-link">Services</a>
+      <a href="#process" class="drawer-link">How it works</a>
+      <a href="#comparison" class="drawer-link">Why Us</a>
+      <a href="#pricing" class="drawer-link">Pricing</a>
+      <a href="#faqs" class="drawer-link">FAQs</a>
+      <a href="#contact" class="btn btn-dark btn-block btn-pill">Get Started</a>
+    </div>
+  </div>
+
+  <!-- SVG Shaders & Glass Filters -->
+  <svg class="shader-svg-defs" aria-hidden="true" style="position: absolute; width: 0; height: 0; pointer-events: none;">
+    <defs>
+      <filter id="glass-effect" x="-50%" y="-50%" width="200%" height="200%">
+        <feTurbulence baseFrequency="0.005" numOctaves="1" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="0.3" />
+        <feColorMatrix type="matrix" values="1 0 0 0 0.02 0 1 0 0 0.02 0 0 1 0 0.05 0 0 0 0.9 0" result="tint" />
+      </filter>
+      <filter id="text-glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+        <feMerge>
+          <feMergeNode in="coloredBlur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+      <filter id="logo-glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+        <feMerge>
+          <feMergeNode in="coloredBlur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- HERO SECTION (With Interactive Mesh Shader & ProjectOne Showcase) -->
+  <section class="hero-section hero-shader-wrapper" id="hero">
+    
+    <!-- Canvas Dynamic Shader Background -->
+    <canvas id="heroShaderCanvas" class="hero-shader-canvas"></canvas>
+    <div class="shader-overlay-grid"></div>
+
+    <div class="hero-inner-container">
+      <!-- Top Teaser Header with Badge -->
+      <div class="hero-top-bar">
+        <div class="hero-partner-badge glass-shader-badge">
+          <div class="badge-shimmer-top"></div>
+          <span class="badge-star">★</span>
+          <span>VERIFIED TOP GROWTH PARTNER</span>
+        </div>
+        <div class="hero-teaser-text">
+          Who wouldn’t want a growth engine like this?!
+        </div>
+      </div>
+
+      <!-- Interactive Tabs Showcase (ProjectOne Exact Feature) -->
+      <div class="hero-browser-showcase">
+        <!-- Showcase Selector Tabs -->
+        <div class="showcase-tabs-nav" id="showcaseTabs">
+          <button class="showcase-tab active" data-target="tab-leads">
+            <span class="tab-dot"></span>
+            <span>Insurance Leads Pipeline</span>
+          </button>
+          <button class="showcase-tab" data-target="tab-callcenter">
+            <span class="tab-dot"></span>
+            <span>Call Center Hub</span>
+          </button>
+          <button class="showcase-tab" data-target="tab-support">
+            <span class="tab-dot"></span>
+            <span>24/7 Customer Care</span>
+          </button>
+          <button class="showcase-tab" data-target="tab-webdev">
+            <span class="tab-dot"></span>
+            <span>High-Converting Web</span>
+          </button>
+          <button class="showcase-tab" data-target="tab-leadgen">
+            <span class="tab-dot"></span>
+            <span>Multi-Channel Funnels</span>
+          </button>
+        </div>
+
+        <!-- Mockup Browser Window Frame -->
+        <div class="browser-frame" id="browserFrame">
+          <div class="browser-top-bar">
+            <div class="browser-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="browser-url-bar" id="browserUrl">
+              <span class="lock-icon">🔒</span> https://pipeline.protechlogix.com/insurance-leads
+            </div>
+            <div class="browser-status-pill">
+              <span class="pulse-live"></span> Live System
+            </div>
+          </div>
+
+          <!-- Tab 1: Insurance Leads (Default) -->
+          <div class="browser-content-pane active" id="tab-leads">
+            <div class="mockup-grid-lead">
+              <div class="mock-lead-card lead-highlight">
+                <div class="lead-header">
+                  <span class="lead-type-tag">LIFE &amp; HEALTH &bull; EXCLUSIVE</span>
+                  <span class="lead-time">2 mins ago</span>
+                </div>
+                <div class="lead-name">Marcus Sterling &bull; Age 42</div>
+                <div class="lead-details">
+                  <span>📍 Austin, TX</span>
+                  <span>💰 $750k Term Policy Requested</span>
+                  <span class="verified-tag">✓ Phone Verified &bull; TCPA Compliant</span>
+                </div>
+                <div class="lead-action-row">
+                  <span class="lead-status-btn">Direct Routing &rarr; Agent Dialer</span>
+                  <span class="lead-score">Match Score: 98%</span>
+                </div>
+              </div>
+
+              <div class="mock-lead-card">
+                <div class="lead-header">
+                  <span class="lead-type-tag tag-auto">COMMERCIAL &amp; AUTO</span>
+                  <span class="lead-time">8 mins ago</span>
+                </div>
+                <div class="lead-name">Apex Logistics Fleet (12 Vehicles)</div>
+                <div class="lead-details">
+                  <span>📍 Miami, FL</span>
+                  <span>📋 Comprehensive Fleet Coverage</span>
+                  <span class="verified-tag">✓ Intake Completed</span>
+                </div>
+                <div class="lead-action-row">
+                  <span class="lead-status-btn">Assigned to Senior Broker</span>
+                  <span class="lead-score">Match Score: 96%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 2: Call Center -->
+          <div class="browser-content-pane" id="tab-callcenter">
+            <div class="mockup-grid-center">
+              <div class="stat-mini-card">
+                <div class="mini-label">Active Reps Online</div>
+                <div class="mini-val">24 / 24</div>
+                <div class="mini-sub">100% Inbound Response SLA</div>
+              </div>
+              <div class="stat-mini-card">
+                <div class="mini-label">Avg Answer Speed</div>
+                <div class="mini-val">4.2s</div>
+                <div class="mini-sub">Queue Abandonment: 0.3%</div>
+              </div>
+              <div class="stat-mini-card">
+                <div class="mini-label">Call QA Score</div>
+                <div class="mini-val">99.4%</div>
+                <div class="mini-sub">Weekly Audited Quality</div>
+              </div>
+            </div>
+            <div class="live-call-stream">
+              <div class="stream-row">
+                <span class="pulse-green"></span>
+                <strong>Inbound Call #4829:</strong> New Customer Policy Inquiry &rarr; Rep #08 (Elena R.) Connected
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 3: Customer Support -->
+          <div class="browser-content-pane" id="tab-support">
+            <div class="mockup-grid-center">
+              <div class="stat-mini-card">
+                <div class="mini-label">First Response Time</div>
+                <div class="mini-val">48 sec</div>
+                <div class="mini-sub">24/7 Live Chat &amp; Email</div>
+              </div>
+              <div class="stat-mini-card">
+                <div class="mini-label">CSAT Rating</div>
+                <div class="mini-val">4.9 / 5.0</div>
+                <div class="mini-sub">Based on 1,420+ Reviews</div>
+              </div>
+              <div class="stat-mini-card">
+                <div class="mini-label">Resolution Rate</div>
+                <div class="mini-val">96.8%</div>
+                <div class="mini-sub">First-Contact Resolution</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 4: Web Dev -->
+          <div class="browser-content-pane" id="tab-webdev">
+            <div class="mockup-grid-web">
+              <div class="web-preview-box">
+                <div class="pagespeed-score">
+                  <span class="score-circle">99</span>
+                  <div>
+                    <strong>Google Core Web Vitals</strong>
+                    <p>Lightning Fast Speed &bull; Mobile First &bull; 0.4s LCP</p>
+                  </div>
+                </div>
+                <div class="tech-pill-row">
+                  <span class="tech-badge">Custom UI/UX</span>
+                  <span class="tech-badge">SEO Structured Markup</span>
+                  <span class="tech-badge">Automated Form Routing</span>
+                  <span class="tech-badge">Zero Templates</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 5: Lead Gen -->
+          <div class="browser-content-pane" id="tab-leadgen">
+            <div class="mockup-grid-center">
+              <div class="stat-mini-card">
+                <div class="mini-label">Monthly Pipeline Added</div>
+                <div class="mini-val">$480k+</div>
+                <div class="mini-sub">Meta &amp; Google Ad Funnels</div>
+              </div>
+              <div class="stat-mini-card">
+                <div class="mini-label">Cost Per Qualified Lead</div>
+                <div class="mini-val">-42%</div>
+                <div class="mini-sub">Optimized Multi-Channel</div>
+              </div>
+              <div class="stat-mini-card">
+                <div class="mini-label">Opt-in Conversion</div>
+                <div class="mini-val">18.4%</div>
+                <div class="mini-sub">High-Intent Sales Pages</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Headline & Subtext (ProjectOne Exact Layout) -->
+      <div class="hero-headline-wrap">
+        <h1 class="hero-headline">
+          ONE Partner. ONE Engine.<br />
+          <span class="highlight-underline shader-glow-text">Done right.</span>
+        </h1>
+        <p class="hero-subtext">
+          A custom growth and operations engine, live in two weeks. Call center ops, verified insurance leads, customer support, and custom web development. No freelancers. No generic templates. No hassles.
+        </p>
+      </div>
+
+      <!-- Hero CTA Buttons -->
+      <div class="hero-cta-group">
+        <a href="#contact" class="btn btn-black btn-lg">
+          <span>JOIN WAITLIST</span>
+          <span class="btn-arrow-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </span>
+        </a>
+        <a href="#pricing" class="btn btn-outline btn-lg">VIEW PRICING</a>
+      </div>
+    </div>
+
+    <!-- Pulsing Rotating Badge at Bottom Corner -->
+    <div class="hero-pulsing-badge-corner" aria-hidden="true">
+      <div class="pulsing-halo-core"></div>
+      <svg class="rotating-badge-svg" viewBox="0 0 100 100">
+        <defs>
+          <path id="heroBadgeCircle" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
+        </defs>
+        <text class="badge-text-path">
+          <textPath href="#heroBadgeCircle" startOffset="0%">
+            ★ PROTECHLOGIX ★ LIVE IN 14 DAYS ★
+          </textPath>
+        </text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- INFINITE CHECKLIST TICKER (ProjectOne Style) -->
+  <div class="checklist-ticker-section">
+    <div class="ticker-track">
+      <div class="ticker-item"><span>✦</span> Inbound Call Center</div>
+      <div class="ticker-item"><span>✦</span> Qualified Insurance Leads</div>
+      <div class="ticker-item"><span>✦</span> 24/7 Multilingual Support</div>
+      <div class="ticker-item"><span>✦</span> Custom Web Development</div>
+      <div class="ticker-item"><span>✦</span> Paid Lead Gen Funnels</div>
+      <div class="ticker-item"><span>✦</span> 14-Day Delivery Guarantee</div>
+      <div class="ticker-item"><span>✦</span> 100% Money-Back Guarantee</div>
+      <div class="ticker-item"><span>✦</span> Dedicated Account Manager</div>
+      <div class="ticker-item"><span>✦</span> CRM Integration &amp; Telephony</div>
+      <div class="ticker-item"><span>✦</span> Conversion Rate Optimization</div>
+      <!-- Duplicate for smooth infinite loop -->
+      <div class="ticker-item"><span>✦</span> Inbound Call Center</div>
+      <div class="ticker-item"><span>✦</span> Qualified Insurance Leads</div>
+      <div class="ticker-item"><span>✦</span> 24/7 Multilingual Support</div>
+      <div class="ticker-item"><span>✦</span> Custom Web Development</div>
+      <div class="ticker-item"><span>✦</span> Paid Lead Gen Funnels</div>
+      <div class="ticker-item"><span>✦</span> 14-Day Delivery Guarantee</div>
+      <div class="ticker-item"><span>✦</span> 100% Money-Back Guarantee</div>
+      <div class="ticker-item"><span>✦</span> Dedicated Account Manager</div>
+    </div>
+  </div>
+
+  <!-- SOUND FAMILIAR? NEVER-ENDING CHECKLIST SECTION (ProjectOne Exact Layout) -->
+  <section class="checklist-showcase-section" id="sound-familiar">
+    <div class="container-wide">
+      <div class="checklist-dark-card">
+        
+        <!-- Left Side: Vertically Auto-Scrolling Checklist Window -->
+        <div class="checklist-scroll-col">
+          <div class="checklist-fade-top"></div>
+          <div class="checklist-vertical-track">
+            <!-- Set 1 of Tasks -->
+            <div class="check-task-row">
+              <div class="task-left">
+                <span class="task-checkbox"></span>
+                <span class="task-text">Add Privacy Policy page</span>
+              </div>
+              <span class="task-dots">&bull;&bull;&bull;</span>
+            </div>
+            <div class="check-task-row">
+              <div class="task-left">
+                <span class="task-checkbox"></span>
+                <span class="task-text">Design the 404 page</span>
+              </div>
+              <span class="task-dots">&bull;&bull;&bull;</span>
+            </div>
+            <div class="check-task-row">
+              <div class="task-left">
+                <span class="task-checkbox"></span>
+                <span class="task-text">Migrate content across</span>
+              </div>
+              <span class="task-dots">&bull;&bull;&bull;</span>
+            </div>
+            <div class="check-task-row">
+              <div class="task-left">
+                <span class="task-checkbox"></span>
+                <span class="task-text">Upload font files</span>
+              </div>
+              <span class="task-dots">&bull;&bull;&bull;</span>
+            </div>
+            <div class="check-task-row">
+              <div class="task-left">
+                <span class="task-checkbox"></span>
+                <span class="task-text">Develop the Style Guide page</span>
+              </div>
+              <span class="task-dots">&bull;&bull;&bull;</span>
+            </div>
+            <div class="check-task-row">
+              <div class="task-left">
+                <span class="task-checkbox"></span>
+                <span class="task-text">Get custom graphics made</span>
+              </div>
+              <span class="task-dots">&bull;&bull;&bull;</span>
+            </div>
+            <div class="check-task-row">
+              <div class="task-left">
+                <span class="task-checkbox"></span>
+                <span class="task-text">Update all titles to include SEO keywords</span>
+              </div>
+              <span class="task-dots">&bull;&bull;&bull;</span>
+            </div>
+            <div class="check-task-row">
+              <div class="task-left">
+                <span class="task-checkbox"></span>
+                <span class="task-text">Link logo in the menu navigation to the homepage</span>
+              </div>
+              <span class="task-dots">&bull;&bull;&bull;</span>
+            </div>
+            <div class="check-task-row">
+              <div class="task-left">
+                <span class="task-checkbox"></span>
+                <span class="task-text">Source icons &amp; vector assets</span>
+              </div>
+              <span class="task-dots">&bull;&bull;&bull;</span>
+            </div>
+            <div class="check-task-row">
+              <div class="task-left">
+                <span class="task-checkbox"></span>
+                <span class="task-text">Setup 24/7 call agent routing scripts</span>
+              </div>
+              <span class="task-dots">&bull;&bull;&bull;</span>
+            </div>
+            <div class="check-task-row">
+              <div class="task-left">
+                <span class="task-checkbox"></span>
+                <span class="task-text">Screen &amp; verify insurance lead webhook</span>
+              </div>
+              <span class="task-dots">&bull;&bull;&bull;</span>
+            </div>
+
+            <!-- Set 2 (Duplicate for Seamless Infinite Loop) -->
+            <div class="check-task-row">
+              <div class="task-left">
+                <span class="task-checkbox"></span>
+                <span class="task-text">Add Privacy Policy page</span>
+              </div>
+              <span class="task-dots">&bull;&bull;&bull;</span>
+            </div>
+            <div class="check-task-row">
+              <div class="task-left">
+                <span class="task-checkbox"></span>
+                <span class="task-text">Design the 404 page</span>
+              </div>
+              <span class="task-dots">&bull;&bull;&bull;</span>
+            </div>
+            <div class="check-task-row">
+              <div class="task-left">
+                <span class="task-checkbox"></span>
+                <span class="task-text">Migrate content across</span>
+              </div>
+              <span class="task-dots">&bull;&bull;&bull;</span>
+            </div>
+            <div class="check-task-row">
+              <div class="task-left">
+                <span class="task-checkbox"></span>
+                <span class="task-text">Upload font files</span>
+              </div>
+              <span class="task-dots">&bull;&bull;&bull;</span>
+            </div>
+            <div class="check-task-row">
+              <div class="task-left">
+                <span class="task-checkbox"></span>
+                <span class="task-text">Develop the Style Guide page</span>
+              </div>
+              <span class="task-dots">&bull;&bull;&bull;</span>
+            </div>
+            <div class="check-task-row">
+              <div class="task-left">
+                <span class="task-checkbox"></span>
+                <span class="task-text">Get custom graphics made</span>
+              </div>
+              <span class="task-dots">&bull;&bull;&bull;</span>
+            </div>
+            <div class="check-task-row">
+              <div class="task-left">
+                <span class="task-checkbox"></span>
+                <span class="task-text">Update all titles to include SEO keywords</span>
+              </div>
+              <span class="task-dots">&bull;&bull;&bull;</span>
+            </div>
+            <div class="check-task-row">
+              <div class="task-left">
+                <span class="task-checkbox"></span>
+                <span class="task-text">Link logo in the menu navigation to the homepage</span>
+              </div>
+              <span class="task-dots">&bull;&bull;&bull;</span>
+            </div>
+            <div class="check-task-row">
+              <div class="task-left">
+                <span class="task-checkbox"></span>
+                <span class="task-text">Source icons &amp; vector assets</span>
+              </div>
+              <span class="task-dots">&bull;&bull;&bull;</span>
+            </div>
+          </div>
+          <div class="checklist-fade-bottom"></div>
+        </div>
+
+        <!-- Right Side: Main Copy Headline & Context -->
+        <div class="checklist-content-col">
+          <div class="checklist-eyebrow">Sound Familiar?</div>
+          <h2 class="checklist-main-headline">
+            Your Website Shouldn’t<br />
+            Feel Like a Never-Ending<br />
+            Check List
+          </h2>
+        </div>
+
+        <!-- Floating Green Popping Speech Bubbles (Exact ProjectOne Details) -->
+        <div class="pop-bubble bubble-top-right">
+          <span class="bubble-text">Why can't I edit content myself?</span>
+          <div class="bubble-tail tail-left"></div>
+        </div>
+
+        <div class="pop-bubble bubble-mid-left">
+          <span class="bubble-text">I don't have time for this</span>
+          <div class="bubble-tail tail-left"></div>
+        </div>
+
+        <div class="pop-bubble bubble-mid-bottom">
+          <span class="bubble-text">WordPress is slowing me down</span>
+          <div class="bubble-tail tail-left"></div>
+        </div>
+
+        <div class="pop-bubble bubble-bottom-right">
+          <span class="bubble-text">Is this actually helping me get customers?</span>
+          <div class="bubble-tail tail-left"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ONE DECISION AND YOU'RE DONE SECTION (ProjectOne Exact Layout & 6-Card Bento Grid) -->
+  <section class="one-decision-section">
+    <div class="container-wide">
+      <div class="one-decision-layout">
+        
+        <!-- Left Column: Eyebrow, Massive Title & Neo-Brutalist CTA Button -->
+        <div class="one-decision-left">
+          <div class="decision-eyebrow">ONE DECISION AND YOU'RE DONE.</div>
+          <h2 class="decision-headline">
+            We Make Launching<br />
+            a Custom Growth Engine<br />
+            Insanely Simple.
+          </h2>
+          <div class="decision-cta-wrap">
+            <a href="#contact" class="btn btn-black btn-lg">
+              <span>START WITH PROTECHLOGIX</span>
+              <span class="btn-arrow-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: 6 Bento Cards Grid (3 Green, 2 Cream, 1 Dark Brand Card) -->
+        <div class="one-decision-grid">
+          
+          <!-- Card 1: Green -->
+          <div class="decision-card card-green">
+            <div class="decision-check-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <h4>One team of call reps, lead specialists &amp; developers</h4>
+          </div>
+
+          <!-- Card 2: Cream -->
+          <div class="decision-card card-cream">
+            <div class="decision-check-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <h4>One strategic business and high-converting funnel</h4>
+          </div>
+
+          <!-- Card 3: Green -->
+          <div class="decision-card card-green">
+            <div class="decision-check-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <h4>One dedicated point of contact for the whole process</h4>
+          </div>
+
+          <!-- Card 4: Cream -->
+          <div class="decision-card card-cream">
+            <div class="decision-check-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <h4>One round of revisions and zero back-and-forth</h4>
+          </div>
+
+          <!-- Card 5: Green -->
+          <div class="decision-card card-green">
+            <div class="decision-check-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <h4>One simple, affordable and predictable monthly fee</h4>
+          </div>
+
+          <!-- Card 6: Dark Brand Tile -->
+          <div class="decision-card card-brand-dark">
+            <div class="card-brand-inner">
+              <img src="logo-nav.png" alt="ProTechlogix Agency" class="card-brand-img" />
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION (THE 5 CORE SERVICES) -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="section-header-row">
+        <div>
+          <div class="section-badge">Our Core Expertise</div>
+          <h2 class="section-title-big">Five High-Impact Services.<br />Zero Fluff.</h2>
+        </div>
+        <p class="section-side-desc">
+          Everything your business needs to attract prospects, close deals, and deliver exceptional 24/7 customer care.
+        </p>
+      </div>
+
+      <div class="services-interactive-grid">
+        <!-- Service 1 -->
+        <div class="service-bento-card">
+          <div class="card-num-pill">01</div>
+          <div class="card-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <h3>Call Center Services</h3>
+          <p>Full-spectrum inbound and outbound call center solutions. Native-fluent, professionally trained reps equipped with customized battle-tested objection handling and real-time CRM telephony.</p>
+          <ul class="feature-checklist">
+            <li>Inbound customer intake &amp; order taking</li>
+            <li>Outbound appointment setting &amp; follow-ups</li>
+            <li>Live call recording, QA &amp; weekly KPI scorecards</li>
+            <li>Omnichannel VoIP &amp; seamless CRM sync</li>
+          </ul>
+          <a href="#contact" class="card-action-link">Explore Call Center &rarr;</a>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-bento-card">
+          <div class="card-num-pill">02</div>
+          <div class="card-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+          </div>
+          <h3>24/7 Customer Support</h3>
+          <p>Deliver delightful, rapid customer service around the clock. Empathy-driven agents managing live chat, tickets, emails, and social inquiries with ultra-fast first-response times.</p>
+          <ul class="feature-checklist">
+            <li>24/7 Live Chat &amp; Zendesk/Intercom Management</li>
+            <li>Tier 1 &amp; Tier 2 technical problem resolution</li>
+            <li>CSAT score enhancement &amp; churn reduction</li>
+            <li>Dedicated SLA response time guarantees</li>
+          </ul>
+          <a href="#contact" class="card-action-link">Explore Support &rarr;</a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-bento-card highlight-card">
+          <div class="card-num-pill">03 &bull; HIGH DEMAND</div>
+          <div class="card-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3>Qualified Insurance Leads</h3>
+          <p>Pre-screened, high-intent prospects for insurance producers and agencies. Filtered by coverage type, income, location, and verified interest to maximize your close rates.</p>
+          <ul class="feature-checklist">
+            <li>Life, Health, Auto, Home &amp; Commercial leads</li>
+            <li><strong>Medicare Supplement &amp; Advantage Leads</strong> <span class="coming-soon-badge">COMING SOON</span></li>
+            <li>100% phone-verified &amp; TCPA compliant</li>
+            <li>Real-time instant webhook delivery to your dialer</li>
+          </ul>
+          <a href="#contact" class="card-action-link">Explore Insurance Leads &rarr;</a>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-bento-card">
+          <div class="card-num-pill">04</div>
+          <div class="card-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Custom Web Development</h3>
+          <p>Bespoke, high-performance websites and sales pages that turn visitors into loyal clients. Custom UI/UX, responsive mobile design, clean animations, and enterprise SEO baked in.</p>
+          <ul class="feature-checklist">
+            <li>Tailored modern UI/UX design (No cookie-cutter templates)</li>
+            <li>95+ Google PageSpeed &amp; Core Web Vitals score</li>
+            <li>Conversion-optimized funnels &amp; landing pages</li>
+            <li>CMS, analytics &amp; automated form routing</li>
+          </ul>
+          <a href="#contact" class="card-action-link">Explore Web Dev &rarr;</a>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-bento-card wide-card">
+          <div class="wide-card-layout">
+            <div>
+              <div class="card-num-pill">05</div>
+              <div class="card-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 12l-4-4-4 4M12 16V8"/></svg>
+              </div>
+              <h3>Full-Funnel Lead Generation</h3>
+              <p>End-to-end multi-channel customer acquisition campaigns. We orchestrate Google Ads, Meta Ads, LinkedIn B2B outbound, and automated nurturing to keep your calendar filled with sales calls.</p>
+            </div>
+            <div class="wide-features-col">
+              <ul class="feature-checklist">
+                <li>Paid ads management across Google, Meta &amp; LinkedIn</li>
+                <li>Custom high-converting landing pages included</li>
+                <li>Automated SMS &amp; email follow-up sequences</li>
+                <li>Medicare &amp; Commercial Insurance Ad Funnels <span class="coming-soon-badge">COMING SOON</span></li>
+              </ul>
+              <a href="#contact" class="btn btn-black btn-pill" style="margin-top: 1.25rem;">Scale Your Lead Pipeline &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5-STEP STEPPED TIMELINE BOARD (ProjectOne Exact Layout & Architecture) -->
+  <section class="process-section" id="process">
+    <div class="container-wide">
+      
+      <!-- Center Title, Subtitle & 4 Dark Badges -->
+      <div class="timeline-header-wrap">
+        <h2 class="timeline-title">
+          Meet <span class="title-highlight-box">ProTechlogix</span>
+        </h2>
+        <p class="timeline-subtitle">
+          We build it, we staff it, we handle it. Our bulletproof,<br />
+          5-step process gives you an engine you can't wait to scale.<br />
+          In just two weeks.
+        </p>
+
+        <!-- 4 Badges Row -->
+        <div class="timeline-badges-row">
+          <div class="t-badge"><span class="t-dot"></span> Custom Designed. No Template</div>
+          <div class="t-badge"><span class="t-dot"></span> Live in 14 days. No Exceptions</div>
+          <div class="t-badge"><span class="t-dot"></span> Ops &amp; Copy by Real Specialists</div>
+          <div class="t-badge"><span class="t-dot"></span> 100% Money-Back Guarantee</div>
+        </div>
+
+        <!-- Hand-drawn 2-week annotation arrow -->
+        <div class="hand-drawn-callout">
+          <span>All this in a<br />2 week timeframe!</span>
+          <svg class="hand-arrow-svg" viewBox="0 0 50 60" fill="none" stroke="currentColor">
+            <path d="M40 5 C30 25, 20 35, 10 50 M10 50 L18 45 M10 50 L14 58" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- 5-Column Stepped Timeline Board -->
+      <div class="stepped-board-container">
+        
+        <!-- Top Phase Headers (5 Columns) -->
+        <div class="board-column-headers">
+          <div class="col-head">INITIAL DISCOVERY</div>
+          <div class="col-head">MOODBOARD &amp; WIREFRAME</div>
+          <div class="col-head">UI DESIGN &amp; FEEDBACK</div>
+          <div class="col-head">TECH BUILD, CRM &amp; QA</div>
+          <div class="col-head">GO LIVE!</div>
+        </div>
+
+        <!-- Board Grid Canvas with Vertical Grid Lines -->
+        <div class="board-canvas-grid">
+          
+          <!-- Column 1 -->
+          <div class="board-col col-1">
+            <div class="step-green-card card-kickoff">
+              <div class="step-card-header">
+                <span class="step-card-title">Kickoff</span>
+                <span class="step-card-num">1</span>
+              </div>
+              <p class="step-card-body">
+                One call. You tell us about your business, target audience, call volume, and lead criteria. We take it from there.
+              </p>
+            </div>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="board-col col-2">
+            <div class="step-green-card card-we-build">
+              <div class="step-card-header">
+                <span class="step-card-title">We Build</span>
+                <span class="step-card-num">2</span>
+              </div>
+              <p class="step-card-body">
+                Funnels, agent objection scripts, lead criteria, and tech stack. You don't lift a finger. We handle the whole thing.
+              </p>
+            </div>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="board-col col-3">
+            <div class="step-green-card card-first-look">
+              <div class="step-card-header">
+                <span class="step-card-title">First Look</span>
+                <span class="step-card-num">3</span>
+              </div>
+              <p class="step-card-body">
+                You see the first draft, call routing, and web funnels. Flag anything. This is also your guarantee checkpoint.
+              </p>
+            </div>
+          </div>
+
+          <!-- Column 4 (Holds Revisions on top, Framer Development/QA on bottom) -->
+          <div class="board-col col-4">
+            <div class="step-green-card card-revisions">
+              <div class="step-card-header">
+                <span class="step-card-title">Revisions</span>
+                <span class="step-card-num">4</span>
+              </div>
+              <p class="step-card-body">
+                We apply your feedback in one focused pass. Polished, tested, and ready.
+              </p>
+            </div>
+
+            <div class="step-green-card card-development">
+              <div class="step-card-header">
+                <span class="step-card-title">Development &amp; Telephony</span>
+                <span class="step-card-num">5</span>
+              </div>
+              <p class="step-card-body">
+                We turn the setup into a seamless machine that just works. We handle the technical details. You sit back and relax.
+              </p>
+            </div>
+          </div>
+
+          <!-- Column 5 -->
+          <div class="board-col col-5">
+            <div class="step-green-card card-launch">
+              <div class="step-card-header">
+                <span class="step-card-title">Launch</span>
+                <span class="step-card-num">6</span>
+              </div>
+              <p class="step-card-body">
+                Your engine goes live. Calls are answered, verified leads flow, websites convert. The market finally knows you exist.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHY TRUST US / BENTO SHOWCASE SECTION (ProjectOne Exact Section) -->
+  <section class="trust-bento-section" id="why-trust-us">
+    <div class="container-wide">
+      
+      <!-- Top Row: Heading on Left, Studio Bio on Right -->
+      <div class="trust-header-row">
+        <div class="trust-left-col">
+          <div class="trust-eyebrow">Transforming Operations Globally Since 2020</div>
+          <h2 class="trust-main-heading">
+            Why Trust Us with<br />Your First Impression?
+          </h2>
+        </div>
+        <div class="trust-right-col">
+          <p class="trust-bio-text">
+            ProTechlogix is backed by an award-winning growth and operations studio. We’ve worked with everyone from solo insurance producers and scaling service businesses, to enterprises investing $100k+ in multi-channel lead generation and contact center operations.
+          </p>
+        </div>
+      </div>
+
+      <!-- Bento Grid (ProjectOne Exact Layout with Vivid Green Cards & Visual Tiles) -->
+      <div class="trust-bento-grid">
+        
+        <!-- Tile 1: Web / Laptop Preview -->
+        <div class="bento-tile bento-mockup-tile tile-laptop">
+          <div class="tile-inner-preview">
+            <div class="preview-device laptop-frame">
+              <div class="device-notch"></div>
+              <div class="device-screen screen-web">
+                <div class="screen-header">
+                  <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+                  <span class="screen-title">protechlogix.agency</span>
+                </div>
+                <div class="screen-content-mock">
+                  <div class="mock-hero-bar"></div>
+                  <div class="mock-grid-box"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tile-caption">Custom Web Architecture</div>
+        </div>
+
+        <!-- Tile 2: Asset / Brand Photo Tile -->
+        <div class="bento-tile bento-photo-tile tile-brand">
+          <div class="brand-tote-wrap">
+            <div class="brand-bag">
+              <span class="brand-logo-emboss">PROTECHLOGIX</span>
+              <span class="brand-tagline-emboss">Agency &bull; Done Right.</span>
+            </div>
+          </div>
+          <div class="tile-caption">Identity &amp; Positioning</div>
+        </div>
+
+        <!-- Tile 3: Vivid Green Stat Card 1 (ProjectOne Exact Tile) -->
+        <div class="bento-tile bento-green-stat">
+          <div class="stat-big-num">15x</div>
+          <div class="stat-bold-title">Prestige Awards Won</div>
+          <p class="stat-desc-text">Recognition from the international design and marketing community</p>
+        </div>
+
+        <!-- Tile 4: Tablet / Mobile Pipeline Dashboard -->
+        <div class="bento-tile bento-mockup-tile tile-tablet">
+          <div class="preview-device tablet-frame">
+            <div class="tablet-screen">
+              <div class="tablet-dash-header">
+                <span class="dash-badge">Active Inbound Queue</span>
+                <span class="dash-rate">99.8% Uptime</span>
+              </div>
+              <div class="tablet-metrics-row">
+                <div class="t-stat"><strong>2,840</strong><span>Live Calls</span></div>
+                <div class="t-stat"><strong>48s</strong><span>Avg Response</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="tile-caption">24/7 Omnichannel Telephony</div>
+        </div>
+
+        <!-- Row 2 Tile 5: Vivid Green Stat Card 2 -->
+        <div class="bento-tile bento-green-stat">
+          <div class="stat-big-num">100+</div>
+          <div class="stat-bold-title">Custom Sites &amp; Funnels</div>
+          <p class="stat-desc-text">Each one engineered from scratch for high conversion, zero generic templates</p>
+        </div>
+
+        <!-- Tile 6: Lead Desk / Verification Screen -->
+        <div class="bento-tile bento-mockup-tile tile-leads-desk">
+          <div class="desk-screen-inner">
+            <div class="desk-badge">Verified Lead Stream</div>
+            <div class="lead-ticker-mini">
+              <div class="lead-row-item">
+                <span class="badge-vivid">TCPA ✓</span>
+                <span>$1.2M Commercial Annuity Lead</span>
+              </div>
+              <div class="lead-row-item">
+                <span class="badge-vivid">EXCLUSIVE ✓</span>
+                <span>Term Life Policy (Dallas, TX)</span>
+              </div>
+            </div>
+          </div>
+          <div class="tile-caption">Pre-Qualified Insurance Flow</div>
+        </div>
+
+        <!-- Row 2 Tile 7: Vivid Green Stat Card 3 -->
+        <div class="bento-tile bento-green-stat">
+          <div class="stat-big-num">10k+</div>
+          <div class="stat-bold-title">Hours QA-ing &amp; Scaling</div>
+          <p class="stat-desc-text">We know what drives conversions and closes deals, and what doesn't</p>
+        </div>
+
+        <!-- Tile 8: Mobile Dialer & Rep Interface -->
+        <div class="bento-tile bento-mockup-tile tile-mobile">
+          <div class="preview-device phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="phone-agent-avatar">🎧</div>
+              <div class="phone-call-status">Call in Progress &bull; 03:42</div>
+              <div class="phone-caller-name">David S. &bull; Inbound Quote</div>
+            </div>
+          </div>
+          <div class="tile-caption">Dedicated Call Reps</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION & REVIEWS SECTION (ProjectOne Exact Layout & Left-to-Right Continuous Loop) -->
+  <section class="mission-reviews-section">
+    <!-- Top Dark Mission Row -->
+    <div class="mission-top-dark">
+      <div class="container-wide mission-grid">
+        <!-- Left: Headline + Team Avatars + Hand-drawn Arrow -->
+        <div class="mission-col-left">
+          <h2 class="mission-title">Because the Small Guys<br />Deserve Great Design Too.</h2>
+          
+          <div class="mission-team-wrap">
+            <div class="team-avatars-stack">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&auto=format&fit=crop&q=80" alt="Team member" class="team-avatar-img ring-green" />
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&auto=format&fit=crop&q=80" alt="Team member" class="team-avatar-img ring-green" />
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&auto=format&fit=crop&q=80" alt="Team member" class="team-avatar-img ring-green" />
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&auto=format&fit=crop&q=80" alt="Team member" class="team-avatar-img ring-green" />
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&auto=format&fit=crop&q=80" alt="Team member" class="team-avatar-img ring-green" />
+              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=120&auto=format&fit=crop&q=80" alt="Team member" class="team-avatar-img ring-green" />
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=120&auto=format&fit=crop&q=80" alt="Team member" class="team-avatar-img ring-green" />
+            </div>
+            
+            <div class="team-annotation">
+              <svg class="team-arrow-svg" viewBox="0 0 120 70" fill="none">
+                <path d="M10 60 C 40 40, 70 65, 105 15" stroke="#c6fd50" stroke-width="2.5" stroke-linecap="round" fill="none" />
+                <path d="M92 14 L 105 15 L 104 28" stroke="#c6fd50" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+              </svg>
+              <span class="team-handwritten-note">Meet the talented<br />(and lovely) team!</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Narrative + Neo-Brutalist CTA Button -->
+        <div class="mission-col-right">
+          <p class="mission-narrative-p">
+            We created ProTechlogix because we keep seeing incredible small business owners doing outstanding work, but being held back by a website that doesn't do them justice.
+          </p>
+          <p class="mission-narrative-p">
+            When your brand perception matches the quality of what you actually deliver, everything shifts. Your confidence, your pricing, your credibility, and the clients you attract.
+          </p>
+          <div class="mission-cta-wrap">
+            <a href="#contact" class="btn btn-green-neo">
+              <span>JOIN WAITLIST</span>
+              <span class="btn-arrow-box-dark">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Reviews Marquee (Infinite Seamless Loop Moving Left to Right) -->
+    <div class="reviews-marquee-wrapper">
+      <div class="reviews-marquee-track marquee-ltr">
+        <!-- Set 1 of Review Cards -->
+        <div class="review-card-item">
+          <div class="review-card-top">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Jill Felty" class="review-avatar" />
+            <span class="review-quote-mark">”</span>
+          </div>
+          <h3 class="review-quote-title">They took my site from “ok” to “OMG”</h3>
+          <div class="review-author">Jill Felty | Felty &amp; Co.</div>
+        </div>
+
+        <div class="review-card-item">
+          <div class="review-card-top">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Dan Moore" class="review-avatar" />
+            <span class="review-quote-mark">”</span>
+          </div>
+          <h3 class="review-quote-title">Outstanding quality. Don't even shop around.</h3>
+          <div class="review-author">Dan Moore | PROCAD Designs</div>
+        </div>
+
+        <div class="review-card-item">
+          <div class="review-card-top">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&auto=format&fit=crop&q=80" alt="Katrina Miller" class="review-avatar" />
+            <span class="review-quote-mark">”</span>
+          </div>
+          <h3 class="review-quote-title">Getting this right was critical for my business.</h3>
+          <div class="review-author">Katrina Miller | Evoke HR</div>
+        </div>
+
+        <div class="review-card-item">
+          <div class="review-card-top">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80" alt="Syd Martin" class="review-avatar" />
+            <span class="review-quote-mark">”</span>
+          </div>
+          <h3 class="review-quote-title">Results beyond what I could have imagined.</h3>
+          <div class="review-author">Syd Martin | Fern &amp; Fellow</div>
+        </div>
+
+        <div class="review-card-item">
+          <div class="review-card-top">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&auto=format&fit=crop&q=80" alt="Chris Klop" class="review-avatar" />
+            <span class="review-quote-mark">”</span>
+          </div>
+          <h3 class="review-quote-title">If you've had unpleasant experiences in the past, try these guys!</h3>
+          <div class="review-author">Chris Klop | Kerkhoff Engineering</div>
+        </div>
+
+        <!-- Set 2 (Exact Seamless Duplicate for Continuous Infinite Loop) -->
+        <div class="review-card-item">
+          <div class="review-card-top">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Jill Felty" class="review-avatar" />
+            <span class="review-quote-mark">”</span>
+          </div>
+          <h3 class="review-quote-title">They took my site from “ok” to “OMG”</h3>
+          <div class="review-author">Jill Felty | Felty &amp; Co.</div>
+        </div>
+
+        <div class="review-card-item">
+          <div class="review-card-top">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Dan Moore" class="review-avatar" />
+            <span class="review-quote-mark">”</span>
+          </div>
+          <h3 class="review-quote-title">Outstanding quality. Don't even shop around.</h3>
+          <div class="review-author">Dan Moore | PROCAD Designs</div>
+        </div>
+
+        <div class="review-card-item">
+          <div class="review-card-top">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&auto=format&fit=crop&q=80" alt="Katrina Miller" class="review-avatar" />
+            <span class="review-quote-mark">”</span>
+          </div>
+          <h3 class="review-quote-title">Getting this right was critical for my business.</h3>
+          <div class="review-author">Katrina Miller | Evoke HR</div>
+        </div>
+
+        <div class="review-card-item">
+          <div class="review-card-top">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80" alt="Syd Martin" class="review-avatar" />
+            <span class="review-quote-mark">”</span>
+          </div>
+          <h3 class="review-quote-title">Results beyond what I could have imagined.</h3>
+          <div class="review-author">Syd Martin | Fern &amp; Fellow</div>
+        </div>
+
+        <div class="review-card-item">
+          <div class="review-card-top">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&auto=format&fit=crop&q=80" alt="Chris Klop" class="review-avatar" />
+            <span class="review-quote-mark">”</span>
+          </div>
+          <h3 class="review-quote-title">If you've had unpleasant experiences in the past, try these guys!</h3>
+          <div class="review-author">Chris Klop | Kerkhoff Engineering</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON TABLE (ProjectOne Matrix Style) -->
+  <section class="comparison-section" id="comparison">
+    <div class="container">
+      <div class="section-badge">Why Partner With Us?</div>
+      <h2 class="section-title-big">
+        It's a No-Brainer.<br />
+        <span class="highlight-underline">Why Wouldn't You?</span>
+      </h2>
+      <p class="section-desc">Whether you're comparing freelancers, DIY tools, or bloated legacy agencies, ProTechlogix eliminates the delays, uncertainty, and chaos.</p>
+
+      <div class="comparison-matrix-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th class="col-metric">Feature</th>
+              <th class="col-other">Do It Yourself</th>
+              <th class="col-other">Freelancers</th>
+              <th class="col-other">Traditional Agency</th>
+              <th class="col-nexus">ProTechlogix</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="metric-label">Launch Timeline</td>
+              <td class="bad-text">Whenever you find time</td>
+              <td class="bad-text">4 &ndash; 12 Weeks</td>
+              <td class="bad-text">3 &ndash; 6 Months</td>
+              <td class="nexus-highlight good-text">Live in 14 Days</td>
+            </tr>
+            <tr>
+              <td class="metric-label">Setup &amp; Retainer Cost</td>
+              <td class="bad-text">Your sanity &amp; lost revenue</td>
+              <td class="bad-text">$4k &ndash; $8k upfront each</td>
+              <td class="bad-text">$10k &ndash; $30k+ upfront</td>
+              <td class="nexus-highlight good-text">Flat, Predictable Monthly</td>
+            </tr>
+            <tr>
+              <td class="metric-label">Unified 5-in-1 Stack</td>
+              <td class="bad-text">Impossible</td>
+              <td class="bad-text">5 different strangers</td>
+              <td class="bad-text">Subcontracted markups</td>
+              <td class="nexus-highlight good-text">All Under One Roof</td>
+            </tr>
+            <tr>
+              <td class="metric-label">Dedicated Account Lead</td>
+              <td class="bad-text">None</td>
+              <td class="bad-text">Rarely</td>
+              <td class="bad-text">Junior intern</td>
+              <td class="nexus-highlight good-text">Senior Operations PM</td>
+            </tr>
+            <tr>
+              <td class="metric-label">Money-Back Guarantee</td>
+              <td class="bad-text">No refunds on lost time</td>
+              <td class="bad-text">Zero</td>
+              <td class="bad-text">Locked contracts</td>
+              <td class="nexus-highlight good-text">100% Money-Back Guarantee</td>
+            </tr>
+            <tr>
+              <td class="metric-label">Support &amp; QA Baked In</td>
+              <td class="bad-text">All on you</td>
+              <td class="bad-text">Hourly billing</td>
+              <td class="bad-text">High retainers</td>
+              <td class="nexus-highlight good-text">Fully Included &amp; Managed</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="comparison-cta-box">
+        <h3>Ready for a growth partner that keeps things simple?</h3>
+        <a href="#contact" class="btn btn-black btn-pill btn-lg">JOIN THE PRIORITY LIST &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING SECTION (ProjectOne Exact 3-Column Architecture) -->
+  <section class="pricing-section" id="pricing">
+    <div class="container-wide">
+      
+      <!-- Center Title & Subtitle -->
+      <div class="pricing-header-wrap">
+        <div class="pricing-top-badge">
+          <span class="star-icon">✦</span> Verified Growth Partner
+        </div>
+        <h2 class="pricing-main-title">One Price. One Plan.</h2>
+        <p class="pricing-subtitle">We build it, we staff it, you own it. Everything included.</p>
+      </div>
+
+      <!-- 3-Column Pricing Layout (ProjectOne Exact) -->
+      <div class="pricing-three-columns-grid">
+        
+        <!-- Column 1: Primary Dark Pricing Card -->
+        <div class="pricing-col-main">
+          <div class="plan-tag-green">THE ONE PLAN</div>
+          
+          <div class="price-header-row">
+            <div class="price-display-wrap">
+              <span class="price-dollar">$</span>
+              <span class="price-number" id="planPrice">699</span>
+              <span class="price-currency" id="currencyCode">USD</span>
+            </div>
+            
+            <!-- Currency Switcher Pills -->
+            <div class="currency-switcher-pills">
+              <button type="button" class="curr-btn active" data-curr="USD" data-price="699">USD</button>
+              <button type="button" class="curr-btn" data-curr="EUR" data-price="649">EUR</button>
+              <button type="button" class="curr-btn" data-curr="CAD" data-price="949">CAD</button>
+              <button type="button" class="curr-btn" data-curr="GBP" data-price="559">GBP</button>
+            </div>
+          </div>
+
+          <div class="price-frequency-sub">Per month for 12 months &bull; Flat &amp; Predictable</div>
+
+          <div class="plan-cta-wrapper">
+            <a href="#contact" class="btn btn-black btn-block">
+              <span>JOIN WAITLIST</span>
+              <span class="btn-arrow-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </span>
+            </a>
+          </div>
+
+          <div class="plan-divider-line"></div>
+
+          <div class="plan-included-header">WHAT'S INCLUDED:</div>
+          
+          <ul class="plan-features-checklist">
+            <li><span class="feat-chk">✔</span> Custom-Built High-Converting Funnel &amp; Site</li>
+            <li><span class="feat-chk">✔</span> Full Call Center Operations &amp; Trained Reps</li>
+            <li><span class="feat-chk">✔</span> 24/7 Dedicated Customer Care &amp; Live Chat</li>
+            <li><span class="feat-chk">✔</span> Verified Qualified Insurance Leads (Life, Health, Auto)</li>
+            <li><span class="feat-chk">✔</span> Medicare Supplement &amp; Advantage Pipeline <span class="coming-soon-badge">COMING SOON</span></li>
+            <li><span class="feat-chk">✔</span> Multi-Channel Paid Ad Campaigns Managed</li>
+            <li><span class="feat-chk">✔</span> One Kickoff Call + Fast Revision Pass</li>
+            <li><span class="feat-chk">✔</span> Telephony, CRM &amp; Real-Time Dialer Webhooks</li>
+            <li><span class="feat-chk feat-highlight">✔</span> <strong class="text-green-highlight">100% Money-Back Guarantee</strong></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Stacked Care+ Card & Transfer Ownership Card -->
+        <div class="pricing-col-middle">
+          
+          <!-- Top Card: Green Care+ Addon -->
+          <div class="care-plus-green-card">
+            <div class="care-floating-price">+$199 <small>USD p/m</small></div>
+            <div class="care-plan-tag">PROTECHLOGIX CARE+ PLAN</div>
+            
+            <p class="care-plan-desc">
+              Add at checkout. Get instant access to our senior dev &amp; operations team from day one of going live.
+            </p>
+
+            <ul class="care-features-list">
+              <li><span class="care-chk">✔</span> Instant access to dedicated senior PM</li>
+              <li><span class="care-chk">✔</span> 24hr response turnaround guarantee</li>
+              <li><span class="care-chk">✔</span> Update scripts, objection handling &amp; funnels</li>
+              <li><span class="care-chk">✔</span> Add new marketing channels &amp; queues</li>
+              <li><span class="care-chk">✔</span> Monthly full pipeline health check &amp; audit</li>
+            </ul>
+          </div>
+
+          <!-- Bottom Card: Transfer Ownership Neo-Brutalist Box -->
+          <div class="ownership-transfer-card">
+            <div class="ownership-info-circle">!</div>
+            <p class="ownership-text">
+              At month 12, it's your choice. Take complete ownership of your engine, funnels, and workflows. We'll transfer everything to your team, no questions asked. Or renew for another year and we'll scale and upgrade your entire operations from scratch. Your business will have grown. Your systems should too.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Column 3: "See Work" Dark Portfolio Card -->
+        <div class="pricing-col-work">
+          <h3 class="see-work-title">See Work</h3>
+          <p class="see-work-subtitle">Live operations and funnels built by us, for people like you.</p>
+
+          <div class="see-work-list">
+            <a href="#contact" class="work-link-item">
+              <span>Apex Insurance Brokers</span>
+              <span class="work-arrow">↗</span>
+            </a>
+            <a href="#contact" class="work-link-item">
+              <span>Vance &amp; Co. Policy Network</span>
+              <span class="work-arrow">↗</span>
+            </a>
+            <a href="#contact" class="work-link-item">
+              <span>Lumina Growth Partners</span>
+              <span class="work-arrow">↗</span>
+            </a>
+            <a href="#contact" class="work-link-item">
+              <span>Silverline Health Advisors</span>
+              <span class="work-arrow">↗</span>
+            </a>
+            <a href="#contact" class="work-link-item">
+              <span>Horizon Commercial Fleet</span>
+              <span class="work-arrow">↗</span>
+            </a>
+            <a href="#contact" class="work-link-item">
+              <span>NextWave 24/7 Care</span>
+              <span class="work-arrow">↗</span>
+            </a>
+            <a href="#contact" class="work-link-item">
+              <span>Leaf &amp; Legacy Insurance</span>
+              <span class="work-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS (ProjectOne Style) -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-badge">Client Proof</div>
+      <h2 class="section-title-big">Don't Take Our Word For It.</h2>
+      <p class="section-desc">Real founders and insurance agency owners who scaled with ProTechlogix.</p>
+
+      <div class="testimonials-cards-grid">
+        <div class="testimonial-bubble">
+          <div class="rating-stars">★★★★★</div>
+          <p class="testi-quote">"If you've had unpleasant experiences with agencies and freelancers in the past, try these guys! The insurance leads alone 3x'd our monthly written premium."</p>
+          <div class="testi-meta">
+            <strong>Marcus Vance</strong>
+            <span>Principal &bull; Vance &amp; Co. Insurance</span>
+          </div>
+        </div>
+
+        <div class="testimonial-bubble highlight-testi">
+          <div class="rating-stars">★★★★★</div>
+          <p class="testi-quote">"They took our customer support and inbound call center from 'chaotic' to world-class. Our CSAT score jumped to 98% and refunds dropped by 60%."</p>
+          <div class="testi-meta">
+            <strong>Elena Rostova</strong>
+            <span>COO &bull; Apex Mobility Global</span>
+          </div>
+        </div>
+
+        <div class="testimonial-bubble">
+          <div class="rating-stars">★★★★★</div>
+          <p class="testi-quote">"Outstanding quality. Don't even shop around. Having web development, lead generation, and call agents unified under one roof is an operational superpower."</p>
+          <div class="testi-meta">
+            <strong>David Chen</strong>
+            <span>Managing Partner &bull; Lumina Growth Capital</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION (Accordion ProjectOne Style) -->
+  <section class="faq-section" id="faqs">
+    <div class="container">
+      <div class="faq-layout">
+        <div class="faq-sidebar">
+          <div class="section-badge">FAQs</div>
+          <h2 class="section-title-big">Frequently Asked Questions</h2>
+          <p class="section-desc">Everything you need to know about our services, guarantees, and onboarding.</p>
+          <a href="#contact" class="btn btn-outline btn-pill" style="margin-top: 1rem;">Have more questions? Let's talk &rarr;</a>
+        </div>
+
+        <div class="faq-accordion" id="faqAccordion">
+          <div class="faq-card open">
+            <button class="faq-toggle">
+              <span>Who is ProTechlogix a good fit for?</span>
+              <span class="faq-icon">&plus;</span>
+            </button>
+            <div class="faq-body">
+              <p>ProTechlogix is designed for insurance agents, growing B2B companies, local service businesses, and online brands who want a turnkey growth engine (Call Center, Leads, Web Dev, Support) without managing 5 separate vendors or hiring in-house staff.</p>
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <button class="faq-toggle">
+              <span>How are your insurance leads qualified and verified?</span>
+              <span class="faq-icon">&plus;</span>
+            </button>
+            <div class="faq-body">
+              <p>All our insurance leads are generated through custom high-intent funnels and pre-screened for eligibility, policy interest, geography, and budget. Leads are 100% TCPA-compliant and delivered in real-time via email, SMS, or direct CRM webhook.</p>
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <button class="faq-toggle">
+              <span>How does the 14-day launch process work?</span>
+              <span class="faq-icon">&plus;</span>
+            </button>
+            <div class="faq-body">
+              <p>Day 1 is your Kickoff Call. Days 2-8 we configure your telephony, train agents, build web assets, and set up tracking. Days 9-11 you review everything in a live demo. Days 12-13 we make any adjustments. Day 14 we go live!</p>
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <button class="faq-toggle">
+              <span>What is your 100% Money-Back Guarantee?</span>
+              <span class="faq-icon">&plus;</span>
+            </button>
+            <div class="faq-body">
+              <p>If you participate in our kickoff and first look review within the first 14 days and are not satisfied with the quality of our setup, we refund 100% of your initial fee. No questions asked.</p>
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <button class="faq-toggle">
+              <span>Can I choose just one service or do I need the whole package?</span>
+              <span class="faq-icon">&plus;</span>
+            </button>
+            <div class="faq-body">
+              <p>You can start with any individual service (e.g. only insurance leads or only customer support) and seamlessly add more as your business expands.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GIVING BACK SECTION (ProjectOne Style) -->
+  <section class="giving-back-section">
+    <div class="container">
+      <div class="giving-back-card">
+        <div class="giving-icon-wrap" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="28" height="28" class="giving-heart-svg" fill="currentColor">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+        <div class="giving-content">
+          <div class="giving-pill">GIVING BACK</div>
+          <h3>One Business Scaled, Lives Impacted.</h3>
+          <p>For every client that joins ProTechlogix, a portion of our monthly proceeds is donated directly to hunger relief and clean water charities worldwide. When your business grows, good spreads.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & WAITLIST SECTION (ProjectOne Form Style) -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-card-main">
+        <div class="contact-intro">
+          <div class="section-badge">Get Started</div>
+          <h2 class="contact-main-title">
+            Your Growth Won't Build Itself.<br />
+            <span class="highlight-underline">Good Thing We Will.</span>
+          </h2>
+          <p class="contact-desc">
+            One team. One plan. Zero excuses left. Fill out the brief form below and our team will get in touch within 24 hours with your custom strategy.
+          </p>
+
+          <div class="contact-perks-list">
+            <div class="perk"><span class="perk-chk">✓</span> Free 30-min strategy &amp; pipeline audit</div>
+            <div class="perk"><span class="perk-chk">✓</span> 100% Money-Back Satisfaction Guarantee</div>
+            <div class="perk"><span class="perk-chk">✓</span> Live within 14 days of kickoff</div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap">
+          <form class="clean-form" id="leadForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fullName">Your Full Name *</label>
+                <input type="text" id="fullName" placeholder="John Smith" required />
+              </div>
+              <div class="form-group">
+                <label for="workEmail">Work Email *</label>
+                <input type="email" id="workEmail" placeholder="john@agency.com" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phoneNum">Phone Number *</label>
+                <input type="tel" id="phoneNum" placeholder="+1 (555) 234-5678" required />
+              </div>
+              <div class="form-group">
+                <label for="companyName">Business / Agency Name</label>
+                <input type="text" id="companyName" placeholder="Apex Insurance Partners" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="serviceInterest">Primary Services Needed *</label>
+              <select id="serviceInterest" required>
+                <option value="" disabled selected>Select primary service...</option>
+                <option value="callcenter">Call Center Services (Inbound / Outbound)</option>
+                <option value="support">24/7 Customer Support Team</option>
+                <option value="insurance">Qualified Insurance Agent Leads</option>
+                <option value="webdev">Custom Web Development &amp; Funnels</option>
+                <option value="leadgen">Multi-Channel Lead Generation</option>
+                <option value="all">The Complete ProTechlogix Growth Engine (All 5)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="notes">Tell us about your current bottlenecks or monthly goals</label>
+              <textarea id="notes" rows="3" placeholder="E.g. We need 50 life insurance leads a month and a 24/7 support rep for customer queries..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-black btn-block btn-lg" id="submitBtn">
+              <span>SUBMIT &amp; JOIN WAITLIST</span>
+              <span class="btn-arrow-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </span>
+            </button>
+
+            <div class="form-footer-note">
+              🔒 100% Privacy. We never share your data.
+            </div>
+          </form>
+
+          <div class="form-success-box" id="formSuccessBox" style="display:none;">
+            <div class="success-check">✓</div>
+            <h3>Thank You! Request Received.</h3>
+            <p>Your dedicated Operations Director will reach out within 24 hours with your custom proposal and next steps.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (ProjectOne Exact Layout & Architecture) -->
+  <footer class="footer">
+    <div class="container-wide">
+      <div class="footer-top-grid">
+        <!-- Brand Info Column -->
+        <div class="footer-brand-col">
+          <a href="#" class="footer-logo-link">
+            <img src="logo-nav.png" alt="ProTechlogix Logo" class="brand-logo-img-footer" />
+          </a>
+          <p class="footer-tagline">
+            ProTechlogix is a custom growth and operations engine. Proudly serving founders, producers, and businesses worldwide.
+          </p>
+          <div class="footer-cta-wrap">
+            <a href="#contact" class="btn btn-green-neo">
+              <span>JOIN WAITLIST</span>
+              <span class="btn-arrow-box-dark">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navigation & Socials Column -->
+        <div class="footer-nav-social-wrap">
+          <div class="footer-col-nav">
+            <h5>NAVIGATION</h5>
+            <ul>
+              <li><a href="#process">How It Works</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#why-trust-us">Why Us</a></li>
+              <li><a href="#faqs">FAQ's</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col-social">
+            <h5>SOCIALS</h5>
+            <div class="footer-social-icons">
+              <a href="#" class="social-icon-btn" aria-label="LinkedIn" title="LinkedIn">
+                <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+              </a>
+              <a href="#" class="social-icon-btn" aria-label="X / Twitter" title="X / Twitter">
+                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Awards & Trust Badges Row -->
+      <div class="footer-badges-row">
+        <div class="footer-award-badge" title="Best Innovation">
+          <span class="badge-stars">★★★★★</span>
+          <span>BEST INVENT</span>
+        </div>
+        <div class="footer-award-badge" title="Special Design Award">
+          <span class="badge-stars">✦✦✦</span>
+          <span>DESIGN AWARD</span>
+        </div>
+        <div class="footer-award-badge" title="Verified Ops Quality">
+          <span class="badge-stars">★★★★★</span>
+          <span>TOP OPS</span>
+        </div>
+        <div class="footer-award-badge" title="100% Guaranteed">
+          <span class="badge-stars">✦✦✦</span>
+          <span>100% MONEY BACK</span>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div class="footer-copyright">
+          &copy; <span id="year"></span> ProTechlogix. All Rights Reserved
+        </div>
+
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Refund Policy</a>
+          <a href="#">Refer &amp; Earn</a>
+        </div>
+
+        <div class="footer-bottom-credit">
+          Crafted with 💚 for High-Growth Businesses
+        </div>
+      </div>
+
+      <!-- Giant Ghost Watermark -->
+      <div class="footer-giant-watermark" aria-hidden="true">
+        ProTechlogix
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js?v=2.1"></script>
+</body>
+</html>

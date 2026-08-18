@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 100" fill="none" class="protechlogix-logo">
+  <!-- Geometric "P" Icon in Vivid Green #c6fd50 -->
+  <g class="logo-icon-group">
+    <!-- Top Ribbon of P -->
+    <path d="M20 22 H75 L95 42 L80 62 H42 V46 H70 L78 42 L68 36 H36 V78 L20 62 Z" fill="#c6fd50"/>
+    <!-- Bottom Tail of P -->
+    <path d="M20 68 L42 84 V68 Z" fill="#c6fd50"/>
+  </g>
+
+  <!-- Vertical Divider Line -->
+  <line x1="120" y1="18" x2="120" y2="82" stroke="currentColor" stroke-width="2" opacity="0.4"/>
+
+  <!-- Typography: PRO TECHLOGIX AGENCY -->
+  <g class="logo-text-group" fill="currentColor">
+    <text x="138" y="48" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-weight="900" font-size="28" letter-spacing="0.04em">PRO TECHLOGIX</text>
+    <text x="140" y="74" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-weight="700" font-size="14" letter-spacing="0.32em" opacity="0.85">AGENCY</text>
+  </g>
+</svg>
