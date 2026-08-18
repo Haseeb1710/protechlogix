@@ -3796,7 +3796,7 @@ html {
   }
 }
 
-/* ─── PROCESS TIMELINE HEADER & SIDE CALLOUT ──────────────── */
+/* ─── PROCESS TIMELINE HEADER & ATTACHED SIDE CALLOUT ──────── */
 .timeline-header-wrap {
   text-align: center;
   max-width: 960px;
@@ -3807,13 +3807,26 @@ html {
   align-items: center;
 }
 
+.timeline-title-row {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
 .timeline-title {
   font-size: clamp(2.4rem, 4.4vw, 3.6rem);
   font-weight: 900;
   color: #111111;
   letter-spacing: -0.03em;
   line-height: 1.1;
-  margin-bottom: 20px;
+  margin-bottom: 0;
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 .title-highlight-box {
@@ -3824,6 +3837,56 @@ html {
   border: 2px solid #111111;
   box-shadow: 3px 3px 0px #111111;
   display: inline-block;
+  position: relative;
+}
+
+/* Callout placed closely to the side of the green ProTechlogix box */
+.title-callout-attached {
+  position: absolute;
+  left: calc(100% + 14px);
+  top: 50%;
+  transform: translateY(-50%) rotate(-3deg);
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  user-select: none;
+}
+
+.hand-drawn-callout {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #111111;
+  font-weight: 800;
+  font-size: 0.88rem;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  text-align: left;
+}
+
+.rocket-success-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  transform: rotate(38deg);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: rocketLaunchFloat 2.8s ease-in-out infinite;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.hand-drawn-callout:hover .rocket-success-icon {
+  transform: translate(2px, -3px) rotate(42deg) scale(1.15);
+}
+
+@keyframes rocketLaunchFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(38deg);
+  }
+  50% {
+    transform: translateY(-3px) rotate(34deg);
+  }
 }
 
 .timeline-subtitle {
@@ -3839,7 +3902,7 @@ html {
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
-  margin-bottom: 16px;
+  margin-bottom: 0;
 }
 
 .t-badge {
@@ -3863,58 +3926,20 @@ html {
   background: var(--accent-green);
 }
 
-/* Callout moved completely to the side (No Overlap) */
-.timeline-callout-side {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 4px;
-  padding-right: 36px;
-}
-
-.hand-drawn-callout {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  color: #111111;
-  font-weight: 800;
-  font-size: 0.96rem;
-  line-height: 1.25;
-  letter-spacing: -0.01em;
-  transform: rotate(-3deg);
-}
-
-.rocket-success-icon {
-  width: 38px;
-  height: 38px;
-  flex-shrink: 0;
-  transform: rotate(38deg);
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  animation: rocketLaunchFloat 2.8s ease-in-out infinite;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.hand-drawn-callout:hover .rocket-success-icon {
-  transform: translate(3px, -4px) rotate(42deg) scale(1.15);
-}
-
-@keyframes rocketLaunchFloat {
-  0%, 100% {
-    transform: translateY(0) rotate(38deg);
+@media (max-width: 1080px) {
+  .timeline-title-row {
+    flex-direction: column;
+    align-items: center;
   }
-  50% {
-    transform: translateY(-4px) rotate(34deg);
+
+  .title-callout-attached {
+    position: static;
+    transform: rotate(-3deg);
+    margin-top: 10px;
+    margin-bottom: 6px;
   }
 }
 
-@media (max-width: 768px) {
-  .timeline-callout-side {
-    justify-content: center;
-    padding-right: 0;
-    margin-top: 14px;
-  }
-}
 
 
 
