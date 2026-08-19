@@ -1356,7 +1356,7 @@ html {
 }
 
 .bubble-mid-bottom {
-  bottom: calc(24% - 15px);
+  bottom: calc(24% - 35px);
   left: 38%;
   animation-delay: 1.3s, 2s;
 }
