@@ -1336,34 +1336,34 @@ html {
   border-color: var(--accent-green) transparent transparent transparent;
 }
 
-/* Individual Bubble Positions & Delays */
+/* Individual Bubble Positions & Delays (Positioned around perimeter to never overlap text) */
 .bubble-top-right {
-  top: 14%;
-  right: 6%;
+  top: 15%;
+  right: 5%;
   animation-delay: 0.3s, 1s;
 }
 
 .bubble-top-center {
-  top: 8%;
-  left: 45%;
+  top: 6%;
+  left: 54%;
   animation-delay: 0.5s, 1.2s;
 }
 
 .bubble-mid-left {
-  top: 28%;
-  left: 36%;
+  top: 12%;
+  left: 32%;
   animation-delay: 0.8s, 1.5s;
 }
 
 .bubble-mid-bottom {
-  bottom: calc(24% - 35px);
-  left: 38%;
+  bottom: 6%;
+  left: 35%;
   animation-delay: 1.3s, 2s;
 }
 
 .bubble-bottom-right {
-  bottom: 12%;
-  right: 6%;
+  bottom: 8%;
+  right: 5%;
   animation-delay: 1.6s, 2.5s;
 }
 
