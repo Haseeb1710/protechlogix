@@ -2350,381 +2350,91 @@ html {
   border-bottom: 1px solid var(--border-light);
 }
 
-.pricing-header-wrap {
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto 56px;
+/* ─── BOOK A DEMO TO GET PRICING (Custom Carrier Solutions) ─── */
+.demo-cta-section {
+  padding: 100px 0;
+  background: var(--bg-main);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
 }
 
-.pricing-top-badge {
+.demo-cta-card {
+  background: #141414;
+  border-radius: 28px;
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  padding: 68px 48px;
+  color: #ffffff;
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.demo-cta-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #141414;
-  color: #ffffff;
+  background: rgba(198, 253, 80, 0.12);
+  color: var(--accent-green);
+  border: 1px solid rgba(198, 253, 80, 0.3);
   font-size: 0.76rem;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: 0.08em;
   padding: 6px 16px;
-  border-radius: 20px;
-  margin-bottom: 20px;
-  border: 1px solid #2a2a2a;
+  border-radius: var(--radius-pill);
+  margin-bottom: 24px;
 }
 
-.pricing-top-badge .star-icon {
-  color: var(--accent-green);
-}
-
-.pricing-main-title {
+.demo-cta-title {
   font-family: var(--font-primary);
-  font-size: clamp(2.8rem, 5vw, 4.4rem);
+  font-size: clamp(2.2rem, 4.2vw, 3.6rem);
   font-weight: 900;
-  letter-spacing: -0.04em;
-  color: var(--text-dark);
-  margin-bottom: 12px;
-  line-height: 1.1;
+  letter-spacing: -0.035em;
+  line-height: 1.12;
+  margin-bottom: 20px;
+  color: #ffffff;
 }
 
-.pricing-subtitle {
-  font-size: 1.15rem;
-  color: var(--text-body);
+.demo-cta-desc {
+  font-size: clamp(1.02rem, 1.25vw, 1.18rem);
+  color: #a3a3a3;
+  line-height: 1.6;
+  max-width: 720px;
+  margin: 0 auto 36px;
   font-weight: 500;
 }
 
-/* 3-Column Grid */
-.pricing-three-columns-grid {
-  display: grid;
-  grid-template-columns: 1.15fr 1fr 1fr;
-  gap: 24px;
-  align-items: stretch;
-}
-
-/* Column 1: Primary Dark Plan Card */
-.pricing-col-main {
-  background-color: #141414;
-  border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 36px 32px;
-  color: #ffffff;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: column;
-}
-
-.plan-tag-green {
-  background-color: var(--accent-green);
-  color: #111111;
-  font-size: 0.74rem;
-  font-weight: 900;
-  letter-spacing: 0.04em;
-  padding: 4px 12px;
-  border-radius: 6px;
-  display: inline-block;
-  margin-bottom: 24px;
-  align-self: flex-start;
-}
-
-.price-header-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
-}
-
-.price-display-wrap {
-  display: flex;
-  align-items: baseline;
-  gap: 2px;
-}
-
-.price-dollar {
-  font-size: 2.2rem;
-  font-weight: 900;
-  color: #ffffff;
-}
-
-.price-number {
-  font-size: 3.8rem;
-  font-weight: 900;
-  letter-spacing: -0.04em;
-  line-height: 1;
-  color: #ffffff;
-}
-
-.price-currency {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #a3a3a3;
-  margin-left: 4px;
-}
-
-/* Currency Switcher */
-.currency-switcher-pills {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 4px;
-  background: #222222;
-  padding: 4px;
-  border-radius: 8px;
-  border: 1px solid #333333;
-}
-
-.curr-btn {
-  background: transparent;
-  border: none;
-  color: #888888;
-  font-size: 0.72rem;
-  font-weight: 800;
-  padding: 4px 8px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.curr-btn.active,
-.curr-btn:hover {
-  background: #333333;
-  color: #ffffff;
-}
-
-.price-frequency-sub {
-  font-size: 0.84rem;
-  color: #a3a3a3;
-  font-weight: 500;
-  margin-bottom: 24px;
-}
-
-.plan-cta-wrapper {
-  margin-bottom: 12px;
-}
-
-.plan-divider-line {
-  height: 1px;
-  background: rgba(255, 255, 255, 0.1);
-  margin: 20px 0 20px;
-}
-
-.plan-included-header {
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  color: #888888;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-}
-
-.plan-features-checklist {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  font-size: 0.86rem;
-  color: #e5e5e5;
-  font-weight: 500;
-}
-
-.feat-chk {
-  color: #ffffff;
-  font-weight: 800;
-  margin-right: 6px;
-}
-
-.text-green-highlight {
-  color: var(--accent-green);
-  font-weight: 800;
-}
-
-/* Column 2: Stacked Care+ Card & Transfer Ownership */
-.pricing-col-middle {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.care-plus-green-card {
-  background-color: var(--accent-green);
-  color: #111111;
-  border-radius: 20px;
-  padding: 32px 26px;
-  position: relative;
-  border: 2px solid #111111;
-  box-shadow: 4px 4px 0px #111111;
-}
-
-.care-floating-price {
-  position: absolute;
-  top: -13px;
-  right: 20px;
-  background: #111111;
-  color: #ffffff;
-  font-size: 0.78rem;
-  font-weight: 800;
-  padding: 3px 12px;
-  border-radius: 20px;
-  border: 1.5px solid var(--accent-green);
-}
-
-.care-floating-price small {
-  color: #a3a3a3;
-  font-size: 0.68rem;
-}
-
-.care-plan-tag {
-  font-size: 0.74rem;
-  font-weight: 900;
-  letter-spacing: 0.04em;
-  background: #111111;
-  color: #ffffff;
-  padding: 4px 10px;
-  border-radius: 6px;
-  display: inline-block;
-  margin-bottom: 16px;
-}
-
-.care-plan-desc {
-  font-size: 0.88rem;
-  font-weight: 600;
-  line-height: 1.45;
-  margin-bottom: 18px;
-  color: #111111;
-}
-
-.care-features-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  font-size: 0.84rem;
-  font-weight: 700;
-  color: #111111;
-}
-
-.care-chk {
-  color: #111111;
-  font-weight: 900;
-  margin-right: 6px;
-}
-
-.ownership-transfer-card {
-  background-color: #f7f7f5;
-  border: 2px solid #111111;
-  box-shadow: 4px 4px 0px #111111;
-  border-radius: 20px;
-  padding: 26px 24px;
-  color: #111111;
-}
-
-.ownership-info-circle {
-  width: 26px;
-  height: 26px;
-  background: var(--accent-green);
-  border: 2px solid #111111;
-  border-radius: 50%;
-  display: flex;
+.demo-cta-actions {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-weight: 900;
-  font-size: 0.85rem;
-  margin-bottom: 14px;
-}
-
-.ownership-text {
-  font-size: 0.82rem;
-  font-weight: 600;
-  line-height: 1.5;
-  color: #222222;
-  margin: 0;
-}
-
-/* Column 3: "See Work" Dark Portfolio Card */
-.pricing-col-work {
-  background-color: #141414;
-  border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 36px 32px;
-  color: #ffffff;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: column;
-}
-
-.see-work-title {
-  font-size: 2.2rem;
-  font-weight: 900;
-  letter-spacing: -0.03em;
-  margin-bottom: 8px;
-  color: #ffffff;
-}
-
-.see-work-subtitle {
-  font-size: 0.88rem;
-  color: #a3a3a3;
-  font-weight: 500;
-  margin-bottom: 32px;
-}
-
-.see-work-list {
-  display: flex;
-  flex-direction: column;
   gap: 16px;
-  margin-top: auto;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
 }
 
-.work-link-item {
-  display: flex;
-  justify-content: space-between;
+.demo-cta-guarantee {
+  display: inline-flex;
   align-items: center;
-  font-size: 1.05rem;
-  font-weight: 800;
-  color: #ffffff;
-  text-decoration: none;
-  padding: 6px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  transition: all 0.2s ease;
-}
-
-.work-link-item:hover {
-  color: var(--accent-green);
-  border-bottom-color: var(--accent-green);
-  transform: translateX(4px);
-}
-
-.work-arrow {
-  font-size: 1.1rem;
-}
-
-
-.plan-features-list .chk {
-  color: var(--accent-green);
-  font-weight: 800;
-}
-
-/* Framer Care+ Style Add-on Box */
-.addon-care-box {
-  background: var(--bg-muted);
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-md);
-  padding: 16px;
-  margin-top: 24px;
-}
-
-.addon-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.85rem;
+  gap: 8px;
+  font-size: 0.84rem;
   font-weight: 700;
-  margin-bottom: 6px;
+  color: #888888;
 }
 
-.addon-price {
-  color: var(--accent-green);
-  font-weight: 800;
-}
-
-.addon-care-box p {
-  font-size: 0.78rem;
-  color: var(--text-body);
-  line-height: 1.4;
+@media (max-width: 768px) {
+  .demo-cta-card {
+    padding: 48px 24px;
+  }
+  .demo-cta-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .demo-cta-actions .btn {
+    width: 100%;
+  }
 }
 
 /* ─── TESTIMONIALS ───────────────────────────────────────── */

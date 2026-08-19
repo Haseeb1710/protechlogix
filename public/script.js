@@ -136,25 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. Currency Switcher in Pricing Section (USD / EUR / CAD / GBP)
-  const currBtns = document.querySelectorAll('.curr-btn');
-  const planPriceEl = document.getElementById('planPrice');
-  const currencyCodeEl = document.getElementById('currencyCode');
 
-  if (currBtns.length > 0 && planPriceEl && currencyCodeEl) {
-    currBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        currBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        const curr = btn.getAttribute('data-curr');
-        const price = btn.getAttribute('data-price');
-
-        planPriceEl.textContent = price;
-        currencyCodeEl.textContent = curr;
-      });
-    });
-  }
 
   // 7. Interactive Hero Mesh Shader Canvas Engine (Ultra-Vibrant & Fluid)
   const canvas = document.getElementById('heroShaderCanvas');
