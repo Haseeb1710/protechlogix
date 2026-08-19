@@ -7,7 +7,7 @@
   <meta name="description" content="ProTechlogix builds and runs your growth engine: Call Center Services, 24/7 Customer Support, Pre-Qualified Insurance Leads, Custom Web Dev, and High-Converting Lead Generation." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   
   <!-- Browser Tab Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png?v=3" />
@@ -85,12 +85,65 @@
     </defs>
   </svg>
 
-  <!-- HERO SECTION (With Interactive Mesh Shader & ProjectOne Showcase) -->
+  <!-- HERO SECTION (ProjectOne Aesthetic with Orbiting Picture Catalog & Dynamic Shader) -->
   <section class="hero-section hero-shader-wrapper" id="hero">
     
     <!-- Canvas Dynamic Shader Background -->
     <canvas id="heroShaderCanvas" class="hero-shader-canvas"></canvas>
-    <div class="shader-overlay-grid"></div>    <div class="hero-inner-container">
+    <div class="shader-overlay-grid"></div>
+
+    <!-- Orbiting Catalog Picture Cards (ProjectOne Style Showcase) -->
+    <div class="hero-catalog-orbit" aria-hidden="false">
+      <!-- Card 1: Top-Left (Home & Auto) -->
+      <div class="polaroid-card card-top-left">
+        <div class="polaroid-img-wrap">
+          <img src="hero-card-homeauto.jpg" alt="Home &amp; Auto Insurance Quotes Portal" loading="eager" />
+        </div>
+        <div class="polaroid-caption">Home &amp; Auto Insurance</div>
+      </div>
+
+      <!-- Card 2: Top-Right (Health & Medicare) -->
+      <div class="polaroid-card card-top-right">
+        <div class="polaroid-img-wrap">
+          <img src="hero-card-medicare.jpg" alt="Health &amp; Medicare Advantage Dashboard" loading="eager" />
+        </div>
+        <div class="polaroid-caption">Medicare Advantage</div>
+      </div>
+
+      <!-- Card 3: Middle-Left (High-Speed Dialers) -->
+      <div class="polaroid-card card-mid-left">
+        <div class="polaroid-img-wrap">
+          <img src="hero-card-dialer.jpg" alt="Predictive Dialer &amp; Calling Reps" loading="eager" />
+        </div>
+        <div class="polaroid-caption">High-Speed Dialer &amp; CRM</div>
+      </div>
+
+      <!-- Card 4: Bottom-Left (Final Expense & Life) -->
+      <div class="polaroid-card card-bottom-left">
+        <div class="polaroid-img-wrap">
+          <img src="hero-card-finalexpense.jpg" alt="Final Expense &amp; Senior Whole Life" loading="eager" />
+        </div>
+        <div class="polaroid-caption">Final Expense &amp; Life</div>
+      </div>
+
+      <!-- Card 5: Bottom-Right (Appt Setting with Doodle Note) -->
+      <div class="polaroid-card card-bottom-right">
+        <!-- Handwritten Doodle Note -->
+        <div class="hero-doodle-note">
+          <span class="doodle-text">Who wouldn't want leads like this?!</span>
+          <svg class="doodle-arrow-svg" viewBox="0 0 60 40" fill="none">
+            <path d="M5 10 C 25 5, 45 15, 48 30 M 40 25 L 48 30 L 52 20" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="polaroid-img-wrap">
+          <img src="hero-card-apptsetting.jpg" alt="B2B &amp; B2C Appt Setting Pipeline" loading="eager" />
+        </div>
+        <div class="polaroid-caption">B2B &amp; B2C Appt Setting</div>
+      </div>
+    </div>
+
+    <!-- Center Content Container -->
+    <div class="hero-inner-container">
       <!-- Top Teaser Header with Badge -->
       <div class="hero-top-bar">
         <div class="hero-partner-badge glass-shader-badge">
@@ -116,13 +169,19 @@
 
       <!-- Hero CTA Buttons -->
       <div class="hero-cta-group">
-        <a href="#contact" class="btn btn-black btn-lg">
+        <a href="#contact" class="btn btn-primary btn-lg">
           <span>GET QUALIFIED PROSPECTS</span>
           <span class="btn-arrow-box">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
           </span>
         </a>
         <a href="#services" class="btn btn-outline btn-lg">EXPLORE VERTICALS</a>
+      </div>
+
+      <!-- 100% Guarantee Trust Sub-note -->
+      <div class="hero-guarantee-note">
+        <span class="guarantee-dot"></span>
+        <span>100% Money-Back Guarantee</span>
       </div>
     </div>
 

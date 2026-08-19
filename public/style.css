@@ -745,350 +745,221 @@ html {
   100% { transform: scale(1.15); opacity: 1; }
 }
 
-/* Hero Interactive Browser Mockup (Fitted Sizing) */
-.hero-browser-showcase {
+/* ═══════════════════════════════════════════════════════════════
+   ORBITING PICTURE CATALOG SHOWCASE (ProjectOne Exact Aesthetic)
+   Floating tilted polaroid cards surrounding the center headline
+   ═══════════════════════════════════════════════════════════════ */
+
+.hero-catalog-orbit {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  max-width: 880px;
-  margin-bottom: 12px;
+  height: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  pointer-events: none;
+  z-index: 12;
 }
 
-/* Showcase Selector Tabs (Compact & Clean) */
-.showcase-tabs-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-  flex-wrap: wrap;
-  margin-bottom: 10px;
-}
-
-.showcase-tab {
-  background: rgba(22, 22, 22, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  padding: 5px 14px;
-  border-radius: var(--radius-pill);
-  font-family: var(--font-primary);
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #a3a3a3;
+/* Polaroid Card Common Styles */
+.polaroid-card {
+  position: absolute;
+  pointer-events: auto;
+  background: #ffffff;
+  border: 2px solid #111111;
+  border-radius: 14px;
+  padding: 8px 8px 24px 8px;
+  box-shadow: 4px 5px 0px #111111, 0 16px 36px rgba(0, 0, 0, 0.08);
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  transition: var(--transition);
-  box-shadow: var(--shadow-subtle);
+  z-index: 12;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: transform;
 }
 
-.showcase-tab .tab-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--text-muted);
-  transition: var(--transition);
+.polaroid-card:hover {
+  transform: scale(1.1) rotate(0deg) !important;
+  z-index: 35;
+  box-shadow: 8px 12px 0px #111111, 0 28px 50px rgba(0, 0, 0, 0.18);
 }
 
-.showcase-tab:hover {
-  border-color: rgba(255, 255, 255, 0.3);
-  color: #ffffff;
-}
-
-.showcase-tab.active {
-  background: #111111;
-  color: #ffffff;
-  border-color: var(--accent-green);
-  box-shadow: 0 4px 14px rgba(198, 253, 80, 0.2);
-}
-
-.showcase-tab.active .tab-dot {
-  background: var(--accent-green);
-}
-
-/* Browser Frame */
-.browser-frame {
-  background: #141414;
-  border: 1.5px solid rgba(255, 255, 255, 0.12);
-  border-radius: var(--radius-md);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
+.polaroid-img-wrap {
   overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #111111;
+}
+
+.polaroid-img-wrap img {
+  width: 185px;
+  height: 130px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.polaroid-card:hover .polaroid-img-wrap img {
+  transform: scale(1.04);
+}
+
+.polaroid-caption {
+  font-family: var(--font-primary);
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: #111111;
+  margin-top: 8px;
   text-align: left;
-  transition: var(--transition);
+  padding-left: 2px;
+  letter-spacing: -0.01em;
 }
 
-.browser-frame:hover {
-  border-color: rgba(198, 253, 80, 0.3);
-  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.7);
+/* Specific Card Positioning & Floating Keyframes */
+.card-top-left {
+  top: 8%;
+  left: 13%;
+  transform: rotate(-8deg);
+  animation: floatCard1 6s ease-in-out infinite alternate;
 }
 
-.browser-top-bar {
-  background: #181818;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 8px 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+.card-top-right {
+  top: 9%;
+  right: 12%;
+  transform: rotate(12deg);
+  animation: floatCard2 6.5s ease-in-out infinite alternate;
 }
 
-.browser-dots {
-  display: flex;
-  gap: 5px;
+.card-mid-left {
+  top: 42%;
+  left: 3%;
+  transform: rotate(-13deg);
+  animation: floatCard3 7.2s ease-in-out infinite alternate;
 }
 
-.browser-dots span {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #333333;
+.card-bottom-left {
+  bottom: 8%;
+  left: 15%;
+  transform: rotate(-14deg);
+  animation: floatCard4 6.2s ease-in-out infinite alternate;
 }
 
-.browser-url-bar {
-  background: #101010;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius-pill);
-  padding: 3px 12px;
-  font-size: 0.74rem;
-  font-weight: 600;
-  color: #a3a3a3;
-  flex-grow: 1;
-  max-width: 400px;
+.card-bottom-right {
+  bottom: 8%;
+  right: 14%;
+  transform: rotate(8deg);
+  animation: floatCard5 6.8s ease-in-out infinite alternate;
+}
+
+/* Handwritten Doodle Arrow Note on Bottom-Right Card */
+.hero-doodle-note {
+  position: absolute;
+  top: -34px;
+  left: -130px;
   display: flex;
   align-items: center;
   gap: 6px;
+  transform: rotate(-6deg);
+  white-space: nowrap;
+  pointer-events: none;
 }
 
-.browser-status-pill {
+.doodle-text {
+  font-family: 'Caveat', 'Comic Sans MS', cursive, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #2b333e;
+}
+
+.doodle-arrow-svg {
+  width: 44px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+/* Floating Animations */
+@keyframes floatCard1 {
+  0% { transform: translateY(0px) rotate(-8deg); }
+  100% { transform: translateY(-10px) rotate(-6.5deg); }
+}
+
+@keyframes floatCard2 {
+  0% { transform: translateY(0px) rotate(12deg); }
+  100% { transform: translateY(-12px) rotate(14deg); }
+}
+
+@keyframes floatCard3 {
+  0% { transform: translateY(0px) rotate(-13deg); }
+  100% { transform: translateY(-9px) rotate(-11deg); }
+}
+
+@keyframes floatCard4 {
+  0% { transform: translateY(0px) rotate(-14deg); }
+  100% { transform: translateY(-11px) rotate(-12.5deg); }
+}
+
+@keyframes floatCard5 {
+  0% { transform: translateY(0px) rotate(8deg); }
+  100% { transform: translateY(-10px) rotate(9.5deg); }
+}
+
+/* 100% Guarantee Trust Sub-note */
+.hero-guarantee-note {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  font-size: 0.68rem;
-  font-weight: 800;
-  color: var(--accent-green);
-  background: rgba(198, 253, 80, 0.1);
-  padding: 2px 8px;
-  border-radius: var(--radius-pill);
-  border: 1px solid rgba(198, 253, 80, 0.25);
-}
-
-.pulse-live {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--accent-green);
-  animation: pulse-ring 1.8s infinite;
-}
-
-/* Browser Panes (Compact) */
-.browser-content-pane {
-  display: none;
-  padding: 16px 20px;
-  background: #111111;
-  animation: fadeInPane 0.3s ease;
-}
-
-.browser-content-pane.active {
-  display: block;
-}
-
-@keyframes fadeInPane {
-  from { opacity: 0; transform: translateY(4px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Lead Grid Mockup */
-.mockup-grid-lead {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
-}
-
-.mock-lead-card {
-  background: #181818;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius-sm);
-  padding: 14px 16px;
-  box-shadow: var(--shadow-subtle);
-  transition: var(--transition);
-  color: #ffffff;
-}
-
-.mock-lead-card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(198, 253, 80, 0.4);
-}
-
-.mock-lead-card.lead-highlight {
-  border: 1.5px solid rgba(198, 253, 80, 0.5);
-  background: #1a1e14;
-}
-
-.lead-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
-}
-
-.lead-type-tag {
-  font-size: 0.65rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  background: rgba(198, 253, 80, 0.15);
-  color: var(--accent-green);
-  padding: 2px 7px;
-  border-radius: var(--radius-pill);
-}
-
-.lead-type-tag.tag-auto {
-  background: rgba(255, 255, 255, 0.1);
-  color: #cbd5e1;
-}
-
-.lead-time {
-  font-size: 0.7rem;
-  color: #888888;
-}
-
-.lead-name {
-  font-size: 0.98rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  margin-bottom: 6px;
-  color: #ffffff;
-}
-
-.lead-details {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  font-size: 0.78rem;
-  color: #a3a3a3;
-  margin-bottom: 10px;
-}
-
-.verified-tag {
-  color: var(--accent-green);
-  font-weight: 700;
-  font-size: 0.74rem;
-  margin-top: 2px;
-}
-
-.lead-action-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 8px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  font-size: 0.74rem;
-}
-
-.lead-status-btn {
-  font-weight: 700;
-  color: #e5e5e5;
-}
-
-.lead-score {
-  font-weight: 800;
-  color: var(--accent-green);
-}
-
-/* Call Center & Support Pane */
-.mockup-grid-center {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-}
-
-.stat-mini-card {
-  background: #181818;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius-sm);
-  padding: 12px 14px;
-  box-shadow: var(--shadow-subtle);
-  color: #ffffff;
-}
-
-.mini-label {
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: #888888;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-bottom: 4px;
-}
-
-.mini-val {
-  font-size: 1.45rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: #ffffff;
-  line-height: 1;
-  margin-bottom: 4px;
-}
-
-.mini-sub {
-  font-size: 0.72rem;
-  color: #a3a3a3;
-}
-
-.live-call-stream {
-  margin-top: 10px;
-  background: #181818;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius-sm);
-  padding: 8px 14px;
-  font-size: 0.76rem;
-  color: #e5e5e5;
-}
-
-.stream-row {
-  display: flex;
-  align-items: center;
   gap: 8px;
-}
-
-/* Web Dev Pane */
-.web-preview-box {
-  background: #181818;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius-sm);
-  padding: 16px 20px;
-  color: #ffffff;
-}
-
-.pagespeed-score {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 12px;
-}
-
-.score-circle {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 3px solid var(--accent-green);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: var(--accent-green);
-}
-
-.tech-pill-row {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.tech-badge {
-  background: #111111;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 4px 10px;
-  border-radius: var(--radius-pill);
-  font-size: 0.72rem;
+  margin-top: 20px;
+  font-size: 0.82rem;
   font-weight: 700;
-  color: #e5e5e5;
+  color: #4b5563;
+}
+
+.guarantee-dot {
+  width: 7px;
+  height: 7px;
+  background: #16a34a;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 8px rgba(22, 163, 74, 0.4);
+}
+
+/* Responsive adjustments for catalog cards */
+@media (max-width: 1280px) {
+  .polaroid-img-wrap img {
+    width: 155px;
+    height: 110px;
+  }
+  .card-top-left { left: 8%; top: 6%; }
+  .card-top-right { right: 7%; top: 7%; }
+  .card-mid-left { left: 1%; top: 40%; }
+  .card-bottom-left { left: 9%; bottom: 6%; }
+  .card-bottom-right { right: 8%; bottom: 6%; }
+}
+
+@media (max-width: 991px) {
+  .hero-catalog-orbit {
+    position: relative;
+    inset: auto;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+    max-width: 100%;
+  }
+  .polaroid-card {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    animation: none !important;
+  }
+  .hero-doodle-note {
+    display: none;
+  }
+  .polaroid-img-wrap img {
+    width: 140px;
+    height: 100px;
+  }
 }
 
 /* Hero CTA Buttons Group (Fitted & Compact) */

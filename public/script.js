@@ -46,89 +46,30 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', updateNavbarScrollState, { passive: true });
   updateNavbarScrollState();
 
-  // 3. Hero Showcase Tab Switching & Auto-Rotation (ProjectOne Exact Feature)
-  const showcaseTabs = document.querySelectorAll('.showcase-tab');
-  const browserPanes = document.querySelectorAll('.browser-content-pane');
-  const browserUrl = document.getElementById('browserUrl');
-  const browserFrame = document.getElementById('browserFrame');
+  // 3. Hero Orbiting Polaroid Cards Interactive Parallax
+  const heroWrapper = document.getElementById('hero');
+  const polaroidCards = document.querySelectorAll('.polaroid-card');
 
-  const tabUrls = {
-    'tab-homeauto': 'https://pipeline.protechlogix.com/home-auto-insurance',
-    'tab-healthmedicare': 'https://pipeline.protechlogix.com/health-medicare-advantage',
-    'tab-finalexpense': 'https://pipeline.protechlogix.com/final-expense-life',
-    'tab-coldcalling': 'https://pipeline.protechlogix.com/b2b-b2c-cold-calling',
-    'tab-apptsetting': 'https://pipeline.protechlogix.com/appointment-setting-scale'
-  };
+  if (heroWrapper && polaroidCards.length > 0) {
+    heroWrapper.addEventListener('mousemove', (e) => {
+      const rect = heroWrapper.getBoundingClientRect();
+      const mouseX = (e.clientX - rect.left) / rect.width - 0.5;
+      const mouseY = (e.clientY - rect.top) / rect.height - 0.5;
 
-  let currentTabIndex = 0;
-  let autoRotateInterval = null;
-  let isUserInteracting = false;
-
-  function switchShowcaseTab(index) {
-    if (!showcaseTabs[index]) return;
-    
-    showcaseTabs.forEach(t => t.classList.remove('active'));
-    browserPanes.forEach(p => p.classList.remove('active'));
-
-    const activeTab = showcaseTabs[index];
-    const targetId = activeTab.getAttribute('data-target');
-    const targetPane = document.getElementById(targetId);
-
-    activeTab.classList.add('active');
-    if (targetPane) {
-      targetPane.classList.add('active');
-    }
-
-    if (browserUrl && tabUrls[targetId]) {
-      browserUrl.innerHTML = `<span class="lock-icon">🔒</span> ${tabUrls[targetId]}`;
-    }
-
-    currentTabIndex = index;
-  }
-
-  showcaseTabs.forEach((tab, index) => {
-    tab.addEventListener('click', () => {
-      isUserInteracting = true;
-      switchShowcaseTab(index);
-    });
-  });
-
-  // Auto-rotate tabs every 4.5 seconds
-  function startAutoRotation() {
-    autoRotateInterval = setInterval(() => {
-      if (!isUserInteracting) {
-        let nextIndex = (currentTabIndex + 1) % showcaseTabs.length;
-        switchShowcaseTab(nextIndex);
-      }
-    }, 4500);
-  }
-
-  startAutoRotation();
-
-  // Pause on frame hover
-  if (browserFrame) {
-    browserFrame.addEventListener('mouseenter', () => {
-      isUserInteracting = true;
+      polaroidCards.forEach((card, i) => {
+        const factor = (i + 1) * 6;
+        const moveX = mouseX * factor;
+        const moveY = mouseY * factor;
+        card.style.setProperty('--orbit-offset-x', `${moveX}px`);
+        card.style.setProperty('--orbit-offset-y', `${moveY}px`);
+      });
     });
 
-    browserFrame.addEventListener('mouseleave', () => {
-      isUserInteracting = false;
-    });
-
-    // Subtle 3D mouse tilt
-    browserFrame.addEventListener('mousemove', (e) => {
-      const rect = browserFrame.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      const rotateX = ((y - centerY) / centerY) * -2;
-      const rotateY = ((x - centerX) / centerX) * 2;
-      browserFrame.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
-    });
-
-    browserFrame.addEventListener('mouseleave', () => {
-      browserFrame.style.transform = '';
+    heroWrapper.addEventListener('mouseleave', () => {
+      polaroidCards.forEach(card => {
+        card.style.removeProperty('--orbit-offset-x');
+        card.style.removeProperty('--orbit-offset-y');
+      });
     });
   }
 
