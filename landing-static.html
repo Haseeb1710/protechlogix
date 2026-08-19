@@ -1454,85 +1454,34 @@
     </div>
   </section>
 
-  <!-- CONTACT & WAITLIST SECTION (ProjectOne Form Style) -->
+  <!-- CONTACT & SCHEDULE SECTION (Live Calendly Calendar Booking) -->
   <section class="contact-section" id="contact">
     <div class="container">
       <div class="contact-card-main">
         <div class="contact-intro">
-          <div class="section-badge">Get Started</div>
+          <div class="section-badge">Live Calendar Booking</div>
           <h2 class="contact-main-title">
-            Your Growth Won't Build Itself.<br />
-            <span class="highlight-underline">Good Thing We Will.</span>
+            Schedule a 30-Minute<br />
+            <span class="highlight-underline">Strategy Call.</span>
           </h2>
           <p class="contact-desc">
-            One team. One plan. Zero excuses left. Fill out the brief form below and our team will get in touch within 24 hours with your custom strategy.
+            Pick a date and time on our live calendar that works best for you. Let's discuss your carrier lead qualification, battle-tested scripts, predictive dialers, and custom calling team requirements.
           </p>
 
           <div class="contact-perks-list">
             <div class="perk"><span class="perk-chk">✓</span> Free 30-min strategy &amp; pipeline audit</div>
+            <div class="perk"><span class="perk-chk">✓</span> Direct consultation with our Senior Growth Director</div>
             <div class="perk"><span class="perk-chk">✓</span> 100% Money-Back Satisfaction Guarantee</div>
             <div class="perk"><span class="perk-chk">✓</span> Live within 14 days of kickoff</div>
           </div>
         </div>
 
-        <div class="contact-form-wrap">
-          <form class="clean-form" id="leadForm">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="fullName">Your Full Name *</label>
-                <input type="text" id="fullName" placeholder="John Smith" required />
-              </div>
-              <div class="form-group">
-                <label for="workEmail">Work Email *</label>
-                <input type="email" id="workEmail" placeholder="john@agency.com" required />
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="phoneNum">Phone Number *</label>
-                <input type="tel" id="phoneNum" placeholder="+1 (555) 234-5678" required />
-              </div>
-              <div class="form-group">
-                <label for="companyName">Business / Agency Name</label>
-                <input type="text" id="companyName" placeholder="Apex Insurance Partners" />
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="serviceInterest">Primary Services Needed *</label>
-              <select id="serviceInterest" required>
-                <option value="" disabled selected>Select primary service...</option>
-                <option value="callcenter">Call Center Services (Inbound / Outbound)</option>
-                <option value="support">24/7 Customer Support Team</option>
-                <option value="insurance">Qualified Insurance Agent Leads</option>
-                <option value="webdev">Custom Web Development &amp; Funnels</option>
-                <option value="leadgen">Multi-Channel Lead Generation</option>
-                <option value="all">The Complete ProTechlogix Growth Engine (All 5)</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="notes">Tell us about your current bottlenecks or monthly goals</label>
-              <textarea id="notes" rows="3" placeholder="E.g. We need 50 life insurance leads a month and a 24/7 support rep for customer queries..."></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-black btn-block btn-lg" id="submitBtn">
-              <span>SUBMIT &amp; JOIN WAITLIST</span>
-              <span class="btn-arrow-box">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-              </span>
-            </button>
-
-            <div class="form-footer-note">
-              🔒 100% Privacy. We never share your data.
-            </div>
-          </form>
-
-          <div class="form-success-box" id="formSuccessBox" style="display:none;">
-            <div class="success-check">✓</div>
-            <h3>Thank You! Request Received.</h3>
-            <p>Your dedicated Operations Director will reach out within 24 hours with your custom proposal and next steps.</p>
+        <div class="contact-calendar-wrap">
+          <div class="calendly-card-wrapper">
+            <!-- Calendly inline widget begin -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/protechlogix-info/30min?background_color=1a1a1a&text_color=ffffff&primary_color=c8ff67" style="min-width:320px;height:700px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <!-- Calendly inline widget end -->
           </div>
         </div>
       </div>

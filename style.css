@@ -3082,10 +3082,11 @@ html {
   background: var(--bg-dark);
   color: #ffffff;
   border-radius: var(--radius-xl);
-  padding: 64px;
+  padding: 56px 48px;
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 56px;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 48px;
+  align-items: start;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
 }
 
@@ -3128,6 +3129,23 @@ html {
 .perk-chk {
   color: var(--accent-green);
   font-weight: 800;
+}
+
+/* Calendly Embed Styling */
+.calendly-card-wrapper {
+  background: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
+  min-height: 700px;
+}
+
+.calendly-card-wrapper .calendly-inline-widget {
+  min-width: 320px;
+  height: 700px;
+  border-radius: 18px;
+  overflow: hidden;
 }
 
 /* Contact Form */
