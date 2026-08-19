@@ -1338,21 +1338,33 @@ html {
 
 /* Individual Bubble Positions & Delays */
 .bubble-top-right {
-  top: 12%;
-  right: 10%;
+  top: 14%;
+  right: 6%;
   animation-delay: 0.3s, 1s;
 }
 
+.bubble-top-center {
+  top: 8%;
+  left: 45%;
+  animation-delay: 0.5s, 1.2s;
+}
+
 .bubble-mid-left {
-  top: 21%;
-  left: 30%;
+  top: 28%;
+  left: 36%;
   animation-delay: 0.8s, 1.5s;
 }
 
 .bubble-mid-bottom {
-  bottom: 22%;
-  left: 26%;
+  bottom: 24%;
+  left: 38%;
   animation-delay: 1.3s, 2s;
+}
+
+.bubble-bottom-right {
+  bottom: 12%;
+  right: 6%;
+  animation-delay: 1.6s, 2.5s;
 }
 
 /* ─── ONE DECISION AND YOU'RE DONE (ProjectOne 6-Card Bento Grid) ──── */
