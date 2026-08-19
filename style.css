@@ -1356,7 +1356,7 @@ html {
 }
 
 .bubble-mid-bottom {
-  bottom: 24%;
+  bottom: calc(24% - 15px);
   left: 38%;
   animation-delay: 1.3s, 2s;
 }
@@ -1365,6 +1365,26 @@ html {
   bottom: 12%;
   right: 6%;
   animation-delay: 1.6s, 2.5s;
+}
+
+@keyframes bubblePopIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes bubbleFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
 }
 
 /* ─── ONE DECISION AND YOU'RE DONE (ProjectOne 6-Card Bento Grid) ──── */
