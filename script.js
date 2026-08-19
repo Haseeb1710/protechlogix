@@ -158,7 +158,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 7. Interactive Hero Mesh Shader Canvas Engine (Ultra-Vibrant & Fluid)
   const canvas = document.getElementById('heroShaderCanvas');
-  const heroWrapper = document.getElementById('hero');
   
   if (canvas && heroWrapper) {
     const ctx = canvas.getContext('2d');
