@@ -90,247 +90,245 @@
     
     <!-- Canvas Dynamic Shader Background -->
     <canvas id="heroShaderCanvas" class="hero-shader-canvas"></canvas>
-    <div class="shader-overlay-grid"></div>    <div class="hero-inner-container">
-      <!-- Top Teaser Header with Badge -->
-      <div class="hero-top-bar">
-        <div class="hero-partner-badge glass-shader-badge">
-          <div class="badge-shimmer-top"></div>
-          <span class="badge-star">★</span>
-          <span>ONE STOP SOLUTION FOR INSURANCE CARRIERS IN USA</span>
-        </div>
-        <div class="hero-teaser-text">
-          Lead Qualification &bull; High-Speed Dialers &bull; Calling Reps &bull; B2B &amp; B2C
-        </div>
+    <div class="shader-overlay-grid"></div>    <!-- Top Teaser Header with Badge -->
+    <div class="hero-top-bar" style="position: relative; z-index: 10;">
+      <div class="hero-partner-badge glass-shader-badge">
+        <div class="badge-shimmer-top"></div>
+        <span class="badge-star">★</span>
+        <span>ONE STOP SOLUTION FOR INSURANCE CARRIERS IN USA</span>
+      </div>
+      <div class="hero-teaser-text">
+        Lead Qualification &bull; High-Speed Dialers &bull; Calling Reps &bull; B2B &amp; B2C
+      </div>
+    </div>
+
+    <!-- Interactive Tabs Showcase (Insurance Carrier Engine) -->
+    <div class="hero-browser-showcase" style="position: relative; z-index: 10;">
+      <!-- Showcase Selector Tabs -->
+      <div class="showcase-tabs-nav" id="showcaseTabs">
+        <button class="showcase-tab active" data-target="tab-homeauto">
+          <span class="tab-dot"></span>
+          <span>Home &amp; Auto Insurance</span>
+        </button>
+        <button class="showcase-tab" data-target="tab-healthmedicare">
+          <span class="tab-dot"></span>
+          <span>Health &amp; Medicare Advantage</span>
+        </button>
+        <button class="showcase-tab" data-target="tab-finalexpense">
+          <span class="tab-dot"></span>
+          <span>Final Expense &amp; Life</span>
+        </button>
+        <button class="showcase-tab" data-target="tab-coldcalling">
+          <span class="tab-dot"></span>
+          <span>B2B &amp; B2C Cold Calling</span>
+        </button>
+        <button class="showcase-tab" data-target="tab-apptsetting">
+          <span class="tab-dot"></span>
+          <span>Small, Mid &amp; High Ticket Appt Setting</span>
+        </button>
       </div>
 
-      <!-- Interactive Tabs Showcase (Insurance Carrier Engine) -->
-      <div class="hero-browser-showcase">
-        <!-- Showcase Selector Tabs -->
-        <div class="showcase-tabs-nav" id="showcaseTabs">
-          <button class="showcase-tab active" data-target="tab-homeauto">
-            <span class="tab-dot"></span>
-            <span>Home &amp; Auto Insurance</span>
-          </button>
-          <button class="showcase-tab" data-target="tab-healthmedicare">
-            <span class="tab-dot"></span>
-            <span>Health &amp; Medicare Advantage</span>
-          </button>
-          <button class="showcase-tab" data-target="tab-finalexpense">
-            <span class="tab-dot"></span>
-            <span>Final Expense &amp; Life</span>
-          </button>
-          <button class="showcase-tab" data-target="tab-coldcalling">
-            <span class="tab-dot"></span>
-            <span>B2B &amp; B2C Cold Calling</span>
-          </button>
-          <button class="showcase-tab" data-target="tab-apptsetting">
-            <span class="tab-dot"></span>
-            <span>Small, Mid &amp; High Ticket Appt Setting</span>
-          </button>
+      <!-- Mockup Browser Window Frame -->
+      <div class="browser-frame" id="browserFrame">
+        <div class="browser-top-bar">
+          <div class="browser-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="browser-url-bar" id="browserUrl">
+            <span class="lock-icon">🔒</span> https://pipeline.protechlogix.com/insurance-carriers-usa
+          </div>
+          <div class="browser-status-pill">
+            <span class="pulse-live"></span> Live Dialer &amp; CRM Sync
+          </div>
         </div>
 
-        <!-- Mockup Browser Window Frame -->
-        <div class="browser-frame" id="browserFrame">
-          <div class="browser-top-bar">
-            <div class="browser-dots">
-              <span></span><span></span><span></span>
-            </div>
-            <div class="browser-url-bar" id="browserUrl">
-              <span class="lock-icon">🔒</span> https://pipeline.protechlogix.com/insurance-carriers-usa
-            </div>
-            <div class="browser-status-pill">
-              <span class="pulse-live"></span> Live Dialer &amp; CRM Sync
-            </div>
-          </div>
-
-          <!-- Tab 1: Home & Auto Insurance (Default) -->
-          <div class="browser-content-pane active" id="tab-homeauto">
-            <div class="mockup-grid-lead">
-              <div class="mock-lead-card lead-highlight">
-                <div class="lead-header">
-                  <span class="lead-type-tag">HOME &amp; AUTO BUNDLE &bull; EXCLUSIVE</span>
-                  <span class="lead-time">1 min ago</span>
-                </div>
-                <div class="lead-name">Robert &amp; Sarah Jenkins &bull; Homeowners</div>
-                <div class="lead-details">
-                  <span>📍 Dallas, TX &bull; Single Family Home ($520k Value)</span>
-                  <span>🚗 2 Vehicles (2022 Ford F-150, 2024 Honda CR-V)</span>
-                  <span class="verified-tag">✓ Lead Qualified &bull; TCPA Compliant &bull; Ready for Transfer</span>
-                </div>
-                <div class="lead-action-row">
-                  <span class="lead-status-btn">Live Transfer &rarr; Licensed Carrier Agent</span>
-                  <span class="lead-score">Intent Score: 99%</span>
-                </div>
+        <!-- Tab 1: Home & Auto Insurance (Default) -->
+        <div class="browser-content-pane active" id="tab-homeauto">
+          <div class="mockup-grid-lead">
+            <div class="mock-lead-card lead-highlight">
+              <div class="lead-header">
+                <span class="lead-type-tag">HOME &amp; AUTO BUNDLE &bull; EXCLUSIVE</span>
+                <span class="lead-time">1 min ago</span>
               </div>
-
-              <div class="mock-lead-card">
-                <div class="lead-header">
-                  <span class="lead-type-tag tag-auto">AUTO INSURANCE &bull; HIGH INTENT</span>
-                  <span class="lead-time">5 mins ago</span>
-                </div>
-                <div class="lead-name">David Vance &bull; Clean Driving Record</div>
-                <div class="lead-details">
-                  <span>📍 Phoenix, AZ &bull; Looking for Full Coverage Switch</span>
-                  <span>📋 Current Policy Expiring in 14 Days</span>
-                  <span class="verified-tag">✓ Rep Verified &bull; Script Stage Passed</span>
-                </div>
-                <div class="lead-action-row">
-                  <span class="lead-status-btn">Appt Booked on Agent Calendar</span>
-                  <span class="lead-score">Match Score: 97%</span>
-                </div>
+              <div class="lead-name">Robert &amp; Sarah Jenkins &bull; Homeowners</div>
+              <div class="lead-details">
+                <span>📍 Dallas, TX &bull; Single Family Home ($520k Value)</span>
+                <span>🚗 2 Vehicles (2022 Ford F-150, 2024 Honda CR-V)</span>
+                <span class="verified-tag">✓ Lead Qualified &bull; TCPA Compliant &bull; Ready for Transfer</span>
+              </div>
+              <div class="lead-action-row">
+                <span class="lead-status-btn">Live Transfer &rarr; Licensed Carrier Agent</span>
+                <span class="lead-score">Intent Score: 99%</span>
               </div>
             </div>
-          </div>
 
-          <!-- Tab 2: Health & Medicare Advantage -->
-          <div class="browser-content-pane" id="tab-healthmedicare">
-            <div class="mockup-grid-lead">
-              <div class="mock-lead-card lead-highlight">
-                <div class="lead-header">
-                  <span class="lead-type-tag">MEDICARE ADVANTAGE &bull; PRE-QUALIFIED</span>
-                  <span class="lead-time">Just now</span>
-                </div>
-                <div class="lead-name">Eleanor Patterson &bull; Age 67</div>
-                <div class="lead-details">
-                  <span>📍 Tampa, FL &bull; Medicare Parts A &amp; B Active</span>
-                  <span>💊 Seeking Dental, Vision &amp; Rx Part C Benefits</span>
-                  <span class="verified-tag">✓ CMS &amp; TCPA Compliant Scripting Verified</span>
-                </div>
-                <div class="lead-action-row">
-                  <span class="lead-status-btn">Direct Routing &rarr; Senior Medicare Advisor</span>
-                  <span class="lead-score">Intent Score: 98%</span>
-                </div>
+            <div class="mock-lead-card">
+              <div class="lead-header">
+                <span class="lead-type-tag tag-auto">AUTO INSURANCE &bull; HIGH INTENT</span>
+                <span class="lead-time">5 mins ago</span>
               </div>
-
-              <div class="mock-lead-card">
-                <div class="lead-header">
-                  <span class="lead-type-tag">HEALTH INSURANCE (ACA / PRIVATE)</span>
-                  <span class="lead-time">7 mins ago</span>
-                </div>
-                <div class="lead-name">Michael Chang &bull; Self-Employed Family of 3</div>
-                <div class="lead-details">
-                  <span>📍 Atlanta, GA &bull; Comprehensive Major Medical</span>
-                  <span>💰 $85k Household Income &bull; No Pre-Existing Exclusions</span>
-                  <span class="verified-tag">✓ Income &amp; Zip Code Qualified</span>
-                </div>
-                <div class="lead-action-row">
-                  <span class="lead-status-btn">Transferred to Health Producer</span>
-                  <span class="lead-score">Match Score: 96%</span>
-                </div>
+              <div class="lead-name">David Vance &bull; Clean Driving Record</div>
+              <div class="lead-details">
+                <span>📍 Phoenix, AZ &bull; Looking for Full Coverage Switch</span>
+                <span>📋 Current Policy Expiring in 14 Days</span>
+                <span class="verified-tag">✓ Rep Verified &bull; Script Stage Passed</span>
               </div>
-            </div>
-          </div>
-
-          <!-- Tab 3: Final Expense & Life -->
-          <div class="browser-content-pane" id="tab-finalexpense">
-            <div class="mockup-grid-lead">
-              <div class="mock-lead-card lead-highlight">
-                <div class="lead-header">
-                  <span class="lead-type-tag">FINAL EXPENSE &bull; WARM TRANSFER</span>
-                  <span class="lead-time">3 mins ago</span>
-                </div>
-                <div class="lead-name">Arthur &amp; Linda Coleman &bull; Age 64 &amp; 62</div>
-                <div class="lead-details">
-                  <span>📍 Charlotte, NC &bull; $25,000 Whole Life Policy Each</span>
-                  <span>🛡️ Seeking Guaranteed Burial &amp; Estate Protection</span>
-                  <span class="verified-tag">✓ Decision Maker on Line &bull; Bank Info Ready</span>
-                </div>
-                <div class="lead-action-row">
-                  <span class="lead-status-btn">Live Warm Transfer Initiated</span>
-                  <span class="lead-score">Close Probability: High</span>
-                </div>
-              </div>
-
-              <div class="mock-lead-card">
-                <div class="lead-header">
-                  <span class="lead-type-tag">TERM LIFE &bull; HIGH TICKET</span>
-                  <span class="lead-time">12 mins ago</span>
-                </div>
-                <div class="lead-name">Gregory Hayes &bull; Business Executive (Age 45)</div>
-                <div class="lead-details">
-                  <span>📍 Chicago, IL &bull; $1.5M 20-Year Term Policy</span>
-                  <span>💼 Key Person &amp; Family Income Replacement</span>
-                  <span class="verified-tag">✓ Health Profile Screened &bull; Non-Smoker</span>
-                </div>
-                <div class="lead-action-row">
-                  <span class="lead-status-btn">Appt Set for Senior Broker</span>
-                  <span class="lead-score">Match Score: 99%</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Tab 4: B2B & B2C Cold Calling -->
-          <div class="browser-content-pane" id="tab-coldcalling">
-            <div class="mockup-grid-center">
-              <div class="stat-mini-card">
-                <div class="mini-label">Trained Calling Reps</div>
-                <div class="mini-val">45+ Active</div>
-                <div class="mini-sub">Native US English &amp; Spanish</div>
-              </div>
-              <div class="stat-mini-card">
-                <div class="mini-label">Daily Dials Powered</div>
-                <div class="mini-val">35,000+</div>
-                <div class="mini-sub">Multi-Line Predictive Dialer</div>
-              </div>
-              <div class="stat-mini-card">
-                <div class="mini-label">Lead Qualification Rate</div>
-                <div class="mini-val">98.6%</div>
-                <div class="mini-sub">Custom Underwriting Scripts</div>
-              </div>
-            </div>
-            <div class="live-call-stream">
-              <div class="stream-row">
-                <span class="pulse-green"></span>
-                <strong>Live Calling Session:</strong> Rep #14 (James K.) &rarr; Qualified B2B Commercial Fleet Lead Transferred to Carrier Desk
-              </div>
-            </div>
-          </div>
-
-          <!-- Tab 5: Small, Mid & High Ticket Appt Setting -->
-          <div class="browser-content-pane" id="tab-apptsetting">
-            <div class="mockup-grid-center">
-              <div class="stat-mini-card">
-                <div class="mini-label">Small Ticket (FE / Auto)</div>
-                <div class="mini-val">300+ / mo</div>
-                <div class="mini-sub">High Velocity Volume</div>
-              </div>
-              <div class="stat-mini-card">
-                <div class="mini-label">Mid Ticket (Home/Health)</div>
-                <div class="mini-val">150+ / mo</div>
-                <div class="mini-sub">Bundled Policy Closes</div>
-              </div>
-              <div class="stat-mini-card">
-                <div class="mini-label">High Ticket (Commercial/IUL)</div>
-                <div class="mini-val">45+ / mo</div>
-                <div class="mini-sub">Exclusive Executive Appts</div>
+              <div class="lead-action-row">
+                <span class="lead-status-btn">Appt Booked on Agent Calendar</span>
+                <span class="lead-score">Match Score: 97%</span>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Main Headline & Subtext (One Stop Solution for Insurance Carriers in USA) -->
-      <div class="hero-headline-wrap">
-        <h1 class="hero-headline">
-          One Stop Solution for<br />
-          <span class="highlight-underline shader-glow-text">Insurance Carriers in USA.</span>
-        </h1>
-        <p class="hero-subtext">
-          We take care of lead qualification, scripts, dialer systems, calling reps and give you the exact type of prospects you are looking for. Specializing in <strong>Home, Auto, Health, Medicare Advantage &amp; Final Expense</strong>. B2B &amp; B2C Cold Calling, Appointment Setting—Small Ticket, Mid Ticket, or High Ticket, you name it.
-        </p>
-      </div>
+        <!-- Tab 2: Health & Medicare Advantage -->
+        <div class="browser-content-pane" id="tab-healthmedicare">
+          <div class="mockup-grid-lead">
+            <div class="mock-lead-card lead-highlight">
+              <div class="lead-header">
+                <span class="lead-type-tag">MEDICARE ADVANTAGE &bull; PRE-QUALIFIED</span>
+                <span class="lead-time">Just now</span>
+              </div>
+              <div class="lead-name">Eleanor Patterson &bull; Age 67</div>
+              <div class="lead-details">
+                <span>📍 Tampa, FL &bull; Medicare Parts A &amp; B Active</span>
+                <span>💊 Seeking Dental, Vision &amp; Rx Part C Benefits</span>
+                <span class="verified-tag">✓ CMS &amp; TCPA Compliant Scripting Verified</span>
+              </div>
+              <div class="lead-action-row">
+                <span class="lead-status-btn">Direct Routing &rarr; Senior Medicare Advisor</span>
+                <span class="lead-score">Intent Score: 98%</span>
+              </div>
+            </div>
 
-      <!-- Hero CTA Buttons -->
-      <div class="hero-cta-group">
-        <a href="#contact" class="btn btn-black btn-lg">
-          <span>GET QUALIFIED PROSPECTS</span>
-          <span class="btn-arrow-box">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-          </span>
-        </a>
-        <a href="#services" class="btn btn-outline btn-lg">EXPLORE VERTICALS</a>
+            <div class="mock-lead-card">
+              <div class="lead-header">
+                <span class="lead-type-tag">HEALTH INSURANCE (ACA / PRIVATE)</span>
+                <span class="lead-time">7 mins ago</span>
+              </div>
+              <div class="lead-name">Michael Chang &bull; Self-Employed Family of 3</div>
+              <div class="lead-details">
+                <span>📍 Atlanta, GA &bull; Comprehensive Major Medical</span>
+                <span>💰 $85k Household Income &bull; No Pre-Existing Exclusions</span>
+                <span class="verified-tag">✓ Income &amp; Zip Code Qualified</span>
+              </div>
+              <div class="lead-action-row">
+                <span class="lead-status-btn">Transferred to Health Producer</span>
+                <span class="lead-score">Match Score: 96%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Final Expense & Life -->
+        <div class="browser-content-pane" id="tab-finalexpense">
+          <div class="mockup-grid-lead">
+            <div class="mock-lead-card lead-highlight">
+              <div class="lead-header">
+                <span class="lead-type-tag">FINAL EXPENSE &bull; WARM TRANSFER</span>
+                <span class="lead-time">3 mins ago</span>
+              </div>
+              <div class="lead-name">Arthur &amp; Linda Coleman &bull; Age 64 &amp; 62</div>
+              <div class="lead-details">
+                <span>📍 Charlotte, NC &bull; $25,000 Whole Life Policy Each</span>
+                <span>🛡️ Seeking Guaranteed Burial &amp; Estate Protection</span>
+                <span class="verified-tag">✓ Decision Maker on Line &bull; Bank Info Ready</span>
+              </div>
+              <div class="lead-action-row">
+                <span class="lead-status-btn">Live Warm Transfer Initiated</span>
+                <span class="lead-score">Close Probability: High</span>
+              </div>
+            </div>
+
+            <div class="mock-lead-card">
+              <div class="lead-header">
+                <span class="lead-type-tag">TERM LIFE &bull; HIGH TICKET</span>
+                <span class="lead-time">12 mins ago</span>
+              </div>
+              <div class="lead-name">Gregory Hayes &bull; Business Executive (Age 45)</div>
+              <div class="lead-details">
+                <span>📍 Chicago, IL &bull; $1.5M 20-Year Term Policy</span>
+                <span>💼 Key Person &amp; Family Income Replacement</span>
+                <span class="verified-tag">✓ Health Profile Screened &bull; Non-Smoker</span>
+              </div>
+              <div class="lead-action-row">
+                <span class="lead-status-btn">Appt Set for Senior Broker</span>
+                <span class="lead-score">Match Score: 99%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 4: B2B & B2C Cold Calling -->
+        <div class="browser-content-pane" id="tab-coldcalling">
+          <div class="mockup-grid-center">
+            <div class="stat-mini-card">
+              <div class="mini-label">Trained Calling Reps</div>
+              <div class="mini-val">45+ Active</div>
+              <div class="mini-sub">Native US English &amp; Spanish</div>
+            </div>
+            <div class="stat-mini-card">
+              <div class="mini-label">Daily Dials Powered</div>
+              <div class="mini-val">35,000+</div>
+              <div class="mini-sub">Multi-Line Predictive Dialer</div>
+            </div>
+            <div class="stat-mini-card">
+              <div class="mini-label">Lead Qualification Rate</div>
+              <div class="mini-val">98.6%</div>
+              <div class="mini-sub">Custom Underwriting Scripts</div>
+            </div>
+          </div>
+          <div class="live-call-stream">
+            <div class="stream-row">
+              <span class="pulse-green"></span>
+              <strong>Live Calling Session:</strong> Rep #14 (James K.) &rarr; Qualified B2B Commercial Fleet Lead Transferred to Carrier Desk
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 5: Small, Mid & High Ticket Appt Setting -->
+        <div class="browser-content-pane" id="tab-apptsetting">
+          <div class="mockup-grid-center">
+            <div class="stat-mini-card">
+              <div class="mini-label">Small Ticket (FE / Auto)</div>
+              <div class="mini-val">300+ / mo</div>
+              <div class="mini-sub">High Velocity Volume</div>
+            </div>
+            <div class="stat-mini-card">
+              <div class="mini-label">Mid Ticket (Home/Health)</div>
+              <div class="mini-val">150+ / mo</div>
+              <div class="mini-sub">Bundled Policy Closes</div>
+            </div>
+            <div class="stat-mini-card">
+              <div class="mini-label">High Ticket (Commercial/IUL)</div>
+              <div class="mini-val">45+ / mo</div>
+              <div class="mini-sub">Exclusive Executive Appts</div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+
+    <!-- Main Headline & Subtext (One Stop Solution for Insurance Carriers in USA) -->
+    <div class="hero-headline-wrap" style="position: relative; z-index: 10;">
+      <h1 class="hero-headline">
+        One Stop Solution for<br />
+        <span class="highlight-underline shader-glow-text">Insurance Carriers in USA.</span>
+      </h1>
+      <p class="hero-subtext">
+        We take care of lead qualification, scripts, dialer systems, calling reps and give you the exact type of prospects you are looking for. Specializing in <strong>Home, Auto, Health, Medicare Advantage &amp; Final Expense</strong>. B2B &amp; B2C Cold Calling, Appointment Setting—Small Ticket, Mid Ticket, or High Ticket, you name it.
+      </p>
+    </div>
+
+    <!-- Hero CTA Buttons -->
+    <div class="hero-cta-group" style="position: relative; z-index: 10;">
+      <a href="#contact" class="btn btn-black btn-lg">
+        <span>GET QUALIFIED PROSPECTS</span>
+        <span class="btn-arrow-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </span>
+      </a>
+      <a href="#services" class="btn btn-outline btn-lg">EXPLORE VERTICALS</a>
     </div>
 
     <!-- Pulsing Rotating Badge at Bottom Corner -->
@@ -708,6 +706,7 @@
   <section class="process-section" id="process">
     <div class="container-wide">
       
+      <!-- Center Title, Subtitle & 4 Dark Badges -->
       <!-- Center Title, Subtitle & 4 Dark Badges -->
       <div class="timeline-header-wrap">
         <h2 class="timeline-title">
@@ -1581,6 +1580,6 @@
     </div>
   </footer>
 
-  <script src="/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
