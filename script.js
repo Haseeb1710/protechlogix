@@ -53,11 +53,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const browserFrame = document.getElementById('browserFrame');
 
   const tabUrls = {
-    'tab-leads': 'https://pipeline.nexusone.io/insurance-leads',
-    'tab-callcenter': 'https://pipeline.nexusone.io/call-center-hub',
-    'tab-support': 'https://pipeline.nexusone.io/24-7-customer-care',
-    'tab-webdev': 'https://pipeline.nexusone.io/web-development',
-    'tab-leadgen': 'https://pipeline.nexusone.io/lead-gen-funnels'
+    'tab-homeauto': 'https://pipeline.protechlogix.com/home-auto-insurance',
+    'tab-healthmedicare': 'https://pipeline.protechlogix.com/health-medicare-advantage',
+    'tab-finalexpense': 'https://pipeline.protechlogix.com/final-expense-life',
+    'tab-coldcalling': 'https://pipeline.protechlogix.com/b2b-b2c-cold-calling',
+    'tab-apptsetting': 'https://pipeline.protechlogix.com/appointment-setting-scale'
   };
 
   let currentTabIndex = 0;
